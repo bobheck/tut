@@ -13,7 +13,7 @@ for (var i = 0; i < numbers.length; i++) {
 // doublednumbers using Map
 var doubledMap = numbers.map(function(number) {
     return number * 2;
-})
+});
 
 console.log(doubledMap);
 console.log(doubledFor);
