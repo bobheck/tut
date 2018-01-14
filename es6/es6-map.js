@@ -1,4 +1,4 @@
-// map
+// map - by far most used helper
 
 var numbers = [1, 2, 3];
 
@@ -18,7 +18,7 @@ console.log(doubledMap);
 console.log(doubledFor);
 
 
-// filter out properties from object array
+// pluck out properties from object array
 var cars = [
     { model: 'Ford', price: 'CHEAP' },
     { model: 'Mercedes', price: 'expensive' }
@@ -31,4 +31,42 @@ var prices = cars.map(function(car) {
 console.log(prices);
 
 
+// assignment 1
+// Plucking Values
+// Using map, create a new array that contains the 'height' property
+// of each object.  Assign this new array to the variable 'heights'.
+// Don't forget to use the 'return' keyword in the function!
 
+// assignment 1 solution
+var images = [
+    { height: '34px', width: '39px' },
+    { height: '54px', width: '19px' },
+    { height: '83px', width: '75px' },
+];
+
+var heights = images.map(function(image) {
+    return image.height;
+});
+
+console.log(heights);
+
+
+// assignment 2
+//Calculating Values with Map
+//Using map, create a new array that contains the
+// distance / time value from each trip.  In other words,
+// the new array should contain the (distance / time) value.
+// Assign the result to the variable 'speeds'.
+
+// solution
+var trips = [
+    { distance: 34, time: 10 },
+    { distance: 90, time: 50 },
+    { distance: 59, time: 25 }
+];
+
+var speeds = trips.map(function(trip) {
+    return (trip.distance / trip.time);
+});
+
+console.log(speeds);
