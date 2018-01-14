@@ -24,7 +24,7 @@ console.log(filteredProductsFor);
 var filteredProductsFilter = products.filter(function(product) {
     return product.type === 'fruit';
 });
-
+console.log('filteredProductsFilter:');
 console.log(filteredProductsFilter);
 
 // using passed variable
@@ -36,10 +36,13 @@ var findProd = function(typ)
 }
 
 var filteredProductsVar = findProd('fruit');
+console.log('filteredProductsVar: fruit');
 console.log(filteredProductsVar);
 var filteredProductsVar = findProd('vegetable');
+console.log('filteredProductsVar: vegetable');
 console.log(filteredProductsVar);
 var filteredProductsVar = findProd('meat');
+console.log('filteredProductsVar: meat');
 console.log(filteredProductsVar);
 
 
@@ -53,4 +56,6 @@ var multipleFilter = products.filter(function(product) {
     && product.price < 20
 });
 
+console.log('multipleFilter:');
 console.log(multipleFilter);
+
