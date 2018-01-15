@@ -31,3 +31,10 @@ var ev = computers.every(function(computer) {
 })
 
 console.log('every | every comp: ' + ev);
+
+// use some helper
+var sm = computers.some(function(computer) {
+    return computer.ram > 16;
+})
+
+console.log('some | some comp: ' + sm);
