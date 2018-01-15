@@ -21,3 +21,17 @@ var p = primaryColors.reduce(function(accum, primaryColor) {
 }, []);
 
 console.log(p);
+
+// practical example of reduce
+function balancedParens(string) {
+    return !string.split("").reduce(function(accum, char){
+        if(accum < 0 ) { return accum; }
+        if(char === "(") { return ++accum; }
+        if(char === ")") { return --accum; }
+        return accum;
+    }, 0);
+};
+
+var b = balancedParens(")(()");
+
+console.log(b);
