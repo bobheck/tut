@@ -24,5 +24,49 @@ console.log(dbl(32));
 const hlo = () => "hello";
 console.log(hlo());
 
+// refactoring with fat arrow functions
+// reg way
+const numbers = [1,2,3];
+const dnumbers = numbers.map(function(number) {
+     return 2 * number;
+});
+console.log(dnumbers);
+
+// refactored
+const dnumbers2 = numbers.map(number => 2 * number);
+console.log(dnumbers2);
+
+
+// IMPORTANT
+// this word unambiguity
+
+// old way -- this does not work because this is gone out of scope
+const team = {
+    members: ['Jane', 'Bill'],
+    teamName: 'Super Squad',
+    teamSummary: function() {
+        return this.members.map(function(member) {
+            return `${member} is on team ${this.teamName}`;
+        }); 
+    }
+};
+
+console.log(team.teamSummary());
+
+// fat arrow functions make use of "Lexical this"
+// fat arrow way, this works
+const team2 = {
+    members: ['Jane', 'Bill'],
+    teamName: 'Super Squad',
+    teamSummary: function() {
+        return this.members.map((member) => {      // using fat arrow here makes this === team
+            return `${member} is on team ${this.teamName}`;
+        }); 
+    }
+};
+
+console.log(team2.teamSummary());
+
+
 
 
