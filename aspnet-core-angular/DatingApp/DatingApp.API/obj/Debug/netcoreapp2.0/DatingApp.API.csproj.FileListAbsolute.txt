@@ -1,0 +1,10 @@
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.deps.json
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.runtimeconfig.json
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.runtimeconfig.dev.json
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.dll
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.pdb
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.csproj.CoreCompileInputs.cache
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.AssemblyInfoInputs.cache
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.AssemblyInfo.cs
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.dll
+D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.pdb

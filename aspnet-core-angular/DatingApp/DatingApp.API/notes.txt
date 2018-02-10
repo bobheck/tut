@@ -1,0 +1,9 @@
+use $env:ASPNETCORE_ENVIRONMENT="Development" or $env:ASPNETCORE_ENVIRONMENT="Production" in terminal to set dotnet environment 
+use $env:ASPNETCORE_ENVIRONMENT to view current env
+
+watcher will restart the web server when any changes to files are made
+
+also, turn on AutoSave under File>AutoSave in VSCode to automatically save changes to files as they 
+are made.  This works in conjunction with dotnet watcher to make sure you are always looking at latest
+code.
+
