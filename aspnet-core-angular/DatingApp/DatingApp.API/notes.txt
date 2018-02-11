@@ -7,3 +7,14 @@ also, turn on AutoSave under File>AutoSave in VSCode to automatically save chang
 are made.  This works in conjunction with dotnet watcher to make sure you are always looking at latest
 code.
 
+
+dotnet restore -- restores and fixes packages
+
+dotnet ef -- entity framework commands
+
+to add a migration
+dotnet ef migrations add NAMEOFMIGRATION
+
+to update the database with a migration
+dotnet ef database update
+
