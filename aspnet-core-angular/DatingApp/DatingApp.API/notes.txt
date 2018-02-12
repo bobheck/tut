@@ -18,3 +18,22 @@ dotnet ef migrations add NAMEOFMIGRATION
 to update the database with a migration
 dotnet ef database update
 
+
+example of changing a synchronus api method to asynchronus
+
+        // Synchronus method
+        // GET api/values
+         [HttpGet]
+         public IActionResult GetValues() {
+             var values = _context.Values.ToList();
+             return Ok(values);
+         }
+
+        // Asynchronus method
+        // GET api/values
+        [HttpGet]
+        public async Task<IActionResult> GetValues() {
+            var values = await _context.Values.ToListAsync();
+            return Ok(values);
+        }
+
