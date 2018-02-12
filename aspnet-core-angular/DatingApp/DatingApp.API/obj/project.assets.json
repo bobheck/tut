@@ -12534,25 +12534,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bob Heck\\.nuget\\packages\\": {},
+    "C:\\Users\\rmheck.SABRE\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\tut\\aspnet-core-angular\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
+      "projectUniqueName": "c:\\tut\\tut\\aspnet-core-angular\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
       "projectName": "DatingApp.API",
-      "projectPath": "D:\\tut\\aspnet-core-angular\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
-      "packagesPath": "C:\\Users\\Bob Heck\\.nuget\\packages\\",
-      "outputPath": "D:\\tut\\aspnet-core-angular\\DatingApp\\DatingApp.API\\obj\\",
+      "projectPath": "c:\\tut\\tut\\aspnet-core-angular\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
+      "packagesPath": "C:\\Users\\rmheck.SABRE\\.nuget\\packages\\",
+      "outputPath": "c:\\tut\\tut\\aspnet-core-angular\\DatingApp\\DatingApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bob Heck\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rmheck.SABRE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -12561,7 +12561,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
