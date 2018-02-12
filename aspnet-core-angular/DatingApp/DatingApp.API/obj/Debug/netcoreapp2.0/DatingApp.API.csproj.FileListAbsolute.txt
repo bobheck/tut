@@ -8,3 +8,13 @@ D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\Datin
 D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.AssemblyInfo.cs
 D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.dll
 D:\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.pdb
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.deps.json
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.runtimeconfig.json
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.runtimeconfig.dev.json
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.dll
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.0\DatingApp.API.pdb
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.csproj.CoreCompileInputs.cache
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.AssemblyInfoInputs.cache
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.AssemblyInfo.cs
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.dll
+C:\tut\tut\aspnet-core-angular\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.0\DatingApp.API.pdb
