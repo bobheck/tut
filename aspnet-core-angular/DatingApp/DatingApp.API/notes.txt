@@ -1,5 +1,6 @@
-use $env:ASPNETCORE_ENVIRONMENT="Development" or $env:ASPNETCORE_ENVIRONMENT="Production" in terminal to set dotnet environment 
-use $env:ASPNETCORE_ENVIRONMENT to view current env
+In POWERSHELL
+    use $env:ASPNETCORE_ENVIRONMENT="Development" or $env:ASPNETCORE_ENVIRONMENT="Production" in terminal to set dotnet environment 
+    use $env:ASPNETCORE_ENVIRONMENT to view current env
 
 watcher will restart the web server when any changes to files are made
 
