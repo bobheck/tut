@@ -1,0 +1,14 @@
+dot net cli commands
+
+dotnet --version
+
+dotnet new console --name MyApp
+
+dotnet add package Newtonsoft.Json
+
+dotnet restore
+
+dotnet build
+
+dotnet run
+
