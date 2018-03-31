@@ -24,3 +24,4 @@ export class ValueComponent implements OnInit {
   }
 
 }
+
