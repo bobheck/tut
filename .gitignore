@@ -20,3 +20,4 @@ aspnetcore_source
 bin
 obj
 .vscode
+db.lock
