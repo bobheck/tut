@@ -22,3 +22,5 @@ obj
 .vscode
 db.lock
 venv
+workspace.xml
+/python-master/IfProgramFlow/.idea/workspace.xml
