@@ -22,3 +22,6 @@ obj
 .vscode
 db.lock
 venv
+/react16_mead/indecision/.idea
+/react16_mead/indecision/.idea/workspace.xml
+/python-master/StringFormatting/.idea/workspace.xml
