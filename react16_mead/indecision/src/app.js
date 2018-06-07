@@ -22,46 +22,87 @@ const template = (
 );
 
 
-const user = {
-    name: 'Bob Heck',
-    age: 54,
-    city: 'Midlothian',
-    state: 'TX'
+// const user = {
+//     name: 'Bob Heck',
+//     age: 54,
+//     city: 'Midlothian',
+//     state: 'TX'
+// }
+
+// function checkString (val) {
+//     if(val.length > 0)
+//     {
+//         return val;
+//     }
+//     else
+//     {
+//         return 'Unknown';
+//     }
+// }
+
+// function getValElem(val, title) {
+//     if(val)
+//     {
+//         return <p>{title}: {val}</p>;
+//     }
+//     else
+//     {
+//         return undefined;
+//     }
+// }
+
+// const templateTwo = (
+//     <div>
+//         <h1>{(user.name ? user.name : 'Anonymous' ).toUpperCase()}</h1>
+//         {user.age && user.age >= 18 && <p>Age: {user.age}</p>}
+//         {getValElem(user.city, 'City')}
+//         {getValElem(user.state, 'State')}
+//     </div>
+// );
+
+let count = 0;
+
+const addOne = () => {
+    count++;
+    renderCounterApp();
 }
 
-function checkString (val) {
-    if(val.length > 0)
-    {
-        return val;
-    }
-    else
-    {
-        return 'Unknown';
-    }
+const minusOne = () => {
+    count--;
+    renderCounterApp();
 }
 
-function getValElem(val, title) {
-    if(val)
-    {
-        return <p>{title}: {val}</p>;
-    }
-    else
-    {
-        return undefined;
-    }
+const reset = () => {
+    count = 0;
+    renderCounterApp();
 }
-
-const templateTwo = (
-    <div>
-        <h1>{(user.name ? user.name : 'Anonymous' ).toUpperCase()}</h1>
-        {user.age && user.age >= 18 && <p>Age: {user.age}</p>}
-        {getValElem(user.city, 'City')}
-        {getValElem(user.state, 'State')}
-    </div>
-);
 
 const appRoot = document.getElementById('app');
-ReactDOM.render(template, appRoot);
+
+const renderCounterApp = () => {
+    const templateTwo = (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={addOne}>+1</button>
+            <button onClick={minusOne}>-1</button>
+            <button onClick={reset}>Reset</button>
+        </div>    
+   );
+
+   ReactDOM.render(templateTwo, appRoot);
+};
+
+renderCounterApp();
+
+// ^^^^^
+// Challenge
+// make a "-1" button
+// set up minusOne function
+// log "minusOne" each time clicked
+// make reset button, log reset when clicked
+
+
+
 
 // Challenge 1:
 // 1. Create your own templateTwo var JSX expression
