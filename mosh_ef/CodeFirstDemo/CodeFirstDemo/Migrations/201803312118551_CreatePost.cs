@@ -23,6 +23,6 @@ namespace CodeFirstDemo.Migrations
         public override void Down()
         {
             DropTable("dbo.Posts");
-        }
+        } 
     }
 }
