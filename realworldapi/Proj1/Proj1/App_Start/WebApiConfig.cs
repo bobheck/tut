@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Routing;
+using EnumerationRouteConstraint;
+using Proj1.Models;
 
 namespace Proj1
 {
@@ -12,8 +15,11 @@ namespace Proj1
             // Web API configuration and services
 
             // Web API routes
-            config.MapHttpAttributeRoutes();
-
+            //config.MapHttpAttributeRoutes();
+            var constraintResolver = new DefaultInlineConstraintResolver();
+            constraintResolver.ConstraintMap.Add("enum", typeof(EnumerationConstraint));
+            constraintResolver.ConstraintMap.Add("base64", typeof(Base64Constraint));
+            config.MapHttpAttributeRoutes(constraintResolver);
         }
     }
 }
