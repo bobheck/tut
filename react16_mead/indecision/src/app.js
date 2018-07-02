@@ -1,56 +1,84 @@
 console.log("App.js is running!");
 
-// to use babel babel src/app.js --out-file=public/scripts/app.js --presets=env,react
+// to use babel babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+// live-server public --watch
+// https://reactjs.org/docs/events.html
 
-const titleObj = {
+
+const app = {
     title: "Indecision App",
     subTitle: "Put your life into the hands of a computer",
     //subTitle: '',
-    options: ["One", "Two"]
+    options: []
 };
 
 const onFormSubmit = (e) => {
+    
+    // e.preventDefault stops full page refresh
     e.preventDefault();
     
     const option = e.target.elements.option.value;
-   
-    if(option)
-    {
-        console.log(option);
+
+    // empty string is falsy
+    if(option) {
+        app.options.push(option);
     }
+   
+    e.target.elements.option.value = "";
+    renderForm();
+    
+};
+
+const onClear = (e) => {
+    e.preventDefault();
+    app.options = [];
+    renderForm();
 };
 
 // JSX - JavaScript XML
-const template = (
-    <div>
-        < h1 >
-            {titleObj.title}
-        </h1>
-        {titleObj.subTitle && < h3 > {
-            titleObj.subTitle
-        } </h3>}
-        <p>
-            {titleObj.options.length > 0
-                ? "Here are your options"
-                : "No options"}
-        </p>
-        <ol>
-            <li >
-                Item one
-            </li>
-            <li>
-                Item two
-            </li>
-        </ol>
-        <form onSubmit={onFormSubmit}>
-            <input type="text" name="option"/>
-            <button>Add Option</button>
-        </form>
 
-    </div>
-);
-
+// important, in the form, do not reference {onFormSubmit()}, 
+// which would call the function and get the return value
+// we just want a reference to the function here,
+// so we set it to {onFormSubmit}, sans the parens
 const appRoot = document.getElementById("app");
-ReactDOM.render(template, appRoot);
+
+const renderForm = () => {
+    const template = (
+        <div>
+            < h1 >
+                {app.title}
+            </h1>
+            {app.subTitle && < h3 > {
+                app.subTitle
+            } </h3>}
+            <p>
+                {app.options.length > 0
+                    ? "Here are your options"
+                    : "No options"}
+            </p>
+            <button onClick={onClear}>Clear All Options</button>
+            <p>{app.options.length}</p>
+            <ol>
+                <li >
+                    Item one
+                </li>
+                <li>
+                    Item two
+                </li>
+            </ol>
+    
+            <form onSubmit={onFormSubmit}>
+                <input type="text" name="option"/>
+                <button>Add Option</button>
+            </form>
+    
+        </div>
+    );
+
+    ReactDOM.render(template, appRoot);
+};
+
+renderForm();
 
 

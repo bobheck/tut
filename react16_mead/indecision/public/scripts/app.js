@@ -2,71 +2,106 @@
 
 console.log("App.js is running!");
 
-// to use babel babel src/app.js --out-file=public/scripts/app.js --presets=env,react
+// to use babel babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+// live-server public --watch
+// https://reactjs.org/docs/events.html
 
-var titleObj = {
+
+var app = {
     title: "Indecision App",
     subTitle: "Put your life into the hands of a computer",
     //subTitle: '',
-    options: ["One", "Two"]
+    options: []
 };
 
 var onFormSubmit = function onFormSubmit(e) {
+
+    // e.preventDefault stops full page refresh
     e.preventDefault();
 
     var option = e.target.elements.option.value;
 
+    // empty string is falsy
     if (option) {
-        console.log(option);
+        app.options.push(option);
     }
+
+    e.target.elements.option.value = "";
+    renderForm();
+};
+
+var onClear = function onClear(e) {
+    e.preventDefault();
+    app.options = [];
+    renderForm();
 };
 
 // JSX - JavaScript XML
-var template = React.createElement(
-    "div",
-    null,
-    React.createElement(
-        "h1",
-        null,
-        titleObj.title
-    ),
-    titleObj.subTitle && React.createElement(
-        "h3",
-        null,
-        " ",
-        titleObj.subTitle,
-        " "
-    ),
-    React.createElement(
-        "p",
-        null,
-        titleObj.options.length > 0 ? "Here are your options" : "No options"
-    ),
-    React.createElement(
-        "ol",
+
+// important, in the form, do not reference {onFormSubmit()}, 
+// which would call the function and get the return value
+// we just want a reference to the function here,
+// so we set it to {onFormSubmit}, sans the parens
+var appRoot = document.getElementById("app");
+
+var renderForm = function renderForm() {
+    var template = React.createElement(
+        "div",
         null,
         React.createElement(
-            "li",
+            "h1",
             null,
-            "Item one"
+            app.title
+        ),
+        app.subTitle && React.createElement(
+            "h3",
+            null,
+            " ",
+            app.subTitle,
+            " "
         ),
         React.createElement(
-            "li",
+            "p",
             null,
-            "Item two"
-        )
-    ),
-    React.createElement(
-        "form",
-        { onSubmit: onFormSubmit },
-        React.createElement("input", { type: "text", name: "option" }),
+            app.options.length > 0 ? "Here are your options" : "No options"
+        ),
         React.createElement(
             "button",
+            { onClick: onClear },
+            "Clear All Options"
+        ),
+        React.createElement(
+            "p",
             null,
-            "Add Option"
+            app.options.length
+        ),
+        React.createElement(
+            "ol",
+            null,
+            React.createElement(
+                "li",
+                null,
+                "Item one"
+            ),
+            React.createElement(
+                "li",
+                null,
+                "Item two"
+            )
+        ),
+        React.createElement(
+            "form",
+            { onSubmit: onFormSubmit },
+            React.createElement("input", { type: "text", name: "option" }),
+            React.createElement(
+                "button",
+                null,
+                "Add Option"
+            )
         )
-    )
-);
+    );
 
-var appRoot = document.getElementById("app");
-ReactDOM.render(template, appRoot);
+    ReactDOM.render(template, appRoot);
+};
+
+renderForm();
