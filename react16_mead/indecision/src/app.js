@@ -1,91 +1,52 @@
-console.log("App.js is running!");
-
-// to use babel babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
-// live-server public --watch
-// https://reactjs.org/docs/events.html
-
-
-const app = {
-    title: "Indecision App",
-    subTitle: "Put your life into the hands of a computer",
-    //subTitle: '',
-    options: []
-};
-
-const onFormSubmit = (e) => {
-    
-    // e.preventDefault stops full page refresh
-    e.preventDefault();
-    
-    const option = e.target.elements.option.value;
-
-    // empty string is falsy
-    if(option) {
-        app.options.push(option);
+class Header extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>Indecision</h1>
+                <h3>Put your life in the hands of a computer</h3>
+            </div>
+        );
     }
-   
-    e.target.elements.option.value = "";
-    renderForm();
-    
-};
-
-const onClear = (e) => {
-    e.preventDefault();
-    app.options = [];
-    renderForm();
-};
-
-// JSX - JavaScript XML
-
-// important, in the form, do not reference {onFormSubmit()}, 
-// which would call the function and get the return value
-// we just want a reference to the function here,
-// so we set it to {onFormSubmit}, sans the parens
-
-const onMakeDecision = () => {
-    const rand =  Math.floor(Math.random() * app.options.length);  
-    const option = app.options[rand];
-    alert(option);
 }
 
-const appRoot = document.getElementById("app");
+class Action extends React.Component {
+    render() {
+        return  (
+            <div>
+                <button>What should I do?</button>
+            </div>
+        );
+    }
+}
 
-const renderForm = () => {
-    const template = (
-        <div>
-            < h1 >
-                {app.title}
-            </h1>
-            {app.subTitle && < h3 > {
-                app.subTitle
-            } </h3>}
-            <p>
-                {app.options.length > 0
-                    ? "Here are your options"
-                    : "No options"}
-            </p>
-            <button disabled={app.options.length === 0} onClick={onMakeDecision} >What should I do?</button>        
-            <button onClick={onClear}>Clear All Options</button>
-               
-            <ol>
-                {
-                    app.options.map((opt) => {
-                    return <li key={opt}>{opt}</li>;
-                })
-            }     
-            </ol>
-    
-            <form onSubmit={onFormSubmit}>
-                <input type="text" name="option"/>
-                <button>Add Option</button>
-            </form>
-    
-        </div>
-    );
+class Options extends React.Component {
+    render() {
+        return (
+            <div>
+                Options component here
+            </div>
+        );
+    }
+}
 
-    ReactDOM.render(template, appRoot);
-};
+class AddOption extends React.Component {
+    render() {
+        return (
+            <div>
+                AddOption component here
+            </div>
+        );
+    }
+}
 
-renderForm();
+const jsx = (
+    <div>
+    <Header />
+    <Action />
+    <Options />
+    <AddOption />
+    </div>
 
+);
 
+ReactDOM.render(jsx, document.getElementById('app'));
