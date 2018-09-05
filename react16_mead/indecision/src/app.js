@@ -41,6 +41,13 @@ const onClear = (e) => {
 // which would call the function and get the return value
 // we just want a reference to the function here,
 // so we set it to {onFormSubmit}, sans the parens
+
+const onMakeDecision = () => {
+    const rand =  Math.floor(Math.random() * app.options.length);  
+    const option = app.options[rand];
+    alert(option);
+}
+
 const appRoot = document.getElementById("app");
 
 const renderForm = () => {
@@ -57,15 +64,15 @@ const renderForm = () => {
                     ? "Here are your options"
                     : "No options"}
             </p>
+            <button disabled={app.options.length === 0} onClick={onMakeDecision} >What should I do?</button>        
             <button onClick={onClear}>Clear All Options</button>
-            <p>{app.options.length}</p>
+               
             <ol>
-                <li >
-                    Item one
-                </li>
-                <li>
-                    Item two
-                </li>
+                {
+                    app.options.map((opt) => {
+                    return <li key={opt}>{opt}</li>;
+                })
+            }     
             </ol>
     
             <form onSubmit={onFormSubmit}>

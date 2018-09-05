@@ -42,6 +42,13 @@ var onClear = function onClear(e) {
 // which would call the function and get the return value
 // we just want a reference to the function here,
 // so we set it to {onFormSubmit}, sans the parens
+
+var onMakeDecision = function onMakeDecision() {
+    var rand = Math.floor(Math.random() * app.options.length);
+    var option = app.options[rand];
+    alert(option);
+};
+
 var appRoot = document.getElementById("app");
 
 var renderForm = function renderForm() {
@@ -67,27 +74,24 @@ var renderForm = function renderForm() {
         ),
         React.createElement(
             "button",
+            { disabled: app.options.length === 0, onClick: onMakeDecision },
+            "What should I do?"
+        ),
+        React.createElement(
+            "button",
             { onClick: onClear },
             "Clear All Options"
         ),
         React.createElement(
-            "p",
-            null,
-            app.options.length
-        ),
-        React.createElement(
             "ol",
             null,
-            React.createElement(
-                "li",
-                null,
-                "Item one"
-            ),
-            React.createElement(
-                "li",
-                null,
-                "Item two"
-            )
+            app.options.map(function (opt) {
+                return React.createElement(
+                    "li",
+                    { key: opt },
+                    opt
+                );
+            })
         ),
         React.createElement(
             "form",
