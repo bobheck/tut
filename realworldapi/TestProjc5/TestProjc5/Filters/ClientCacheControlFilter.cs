@@ -77,8 +77,11 @@ namespace TestProjc5.Filters
                     actionExecutedContext.Response.Headers.Date = DateTimeOffset.UtcNow;
                 }
 
-                actionExecutedContext.Response.Content.Headers.Expires =
-                    actionExecutedContext.Response.Headers.Date;
+                if (actionExecutedContext.Response.Content != null)
+                {
+                    actionExecutedContext.Response.Content.Headers.Expires =
+                        actionExecutedContext.Response.Headers.Date;
+                }
             }
             else
             {
@@ -91,15 +94,16 @@ namespace TestProjc5.Filters
                 };
 
                 // create a date if none present so we can have Expires match it
-                // create a date if none present so we can have Expires match it
                 if (!actionExecutedContext.Response.Headers.Date.HasValue)
                 {
                     actionExecutedContext.Response.Headers.Date = DateTimeOffset.UtcNow;
                 }
 
-                actionExecutedContext.Response.Content.Headers.Expires =
-                    actionExecutedContext.Response.Headers.Date.Value.AddSeconds(CacheSeconds);
-
+                if (actionExecutedContext.Response.Content != null)
+                {
+                    actionExecutedContext.Response.Content.Headers.Expires =
+                        actionExecutedContext.Response.Headers.Date.Value.AddSeconds(CacheSeconds);
+                }
 
             }
 
