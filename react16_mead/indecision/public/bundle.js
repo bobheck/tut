@@ -94,19 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.js */ \"./src/utils.js\");\n// import './utils.js'\r\n\r\n\r\nconsole.log('app.js is running !!');\r\nconsole.log(Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__[\"square\"])(999999999999));\r\nconsole.log(Object(_utils_js__WEBPACK_IMPORTED_MODULE_0__[\"add\"])(9, 10));\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _person_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./person.js */ \"./src/person.js\");\n// import subtract, { square, add } from \"./utils.js\";\r\n\r\n// console.log(\"app.js is running !!\");\r\n// console.log(square(999999999999));\r\n// console.log(add(9, 10));\r\n// console.log(subtract(90, 23));\r\n\r\n\r\n\r\nconsole.log(Object(_person_js__WEBPACK_IMPORTED_MODULE_0__[\"isAdult\"])(22));\r\nconsole.log(Object(_person_js__WEBPACK_IMPORTED_MODULE_0__[\"isAdult\"])(7));\r\nconsole.log(Object(_person_js__WEBPACK_IMPORTED_MODULE_0__[\"canDrink\"])(22));\r\nconsole.log(Object(_person_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(67));\r\nconsole.log(Object(_person_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(7));\r\n\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
-/***/ "./src/utils.js":
-/*!**********************!*\
-  !*** ./src/utils.js ***!
-  \**********************/
-/*! exports provided: square, add */
+/***/ "./src/person.js":
+/*!***********************!*\
+  !*** ./src/person.js ***!
+  \***********************/
+/*! exports provided: isAdult, canDrink, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"square\", function() { return square; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"add\", function() { return add; });\nconsole.log('utils.js running');\r\n\r\nconst square = (x) => x * x;\r\nconst add = (a,b) => a + b;\r\n\r\n// exports - 1) default export  2) named exports\r\n\r\n// export command is not defining an object in the braces\r\n//export { square, add };\r\n\n\n//# sourceURL=webpack:///./src/utils.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isAdult\", function() { return isAdult; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"canDrink\", function() { return canDrink; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return isSenior; });\n\r\n\r\n// method one\r\n// export const isAdult = (age) => age >= 18;\r\n// export const canDrink = (age) => age >= 21;\r\n// export default (age) => age >= 65;\r\n\r\n// method two\r\nconst isAdult = (age) => age >= 18;\r\nconst canDrink = (age) => age >= 21;\r\nconst isSenior = (age) => age >= 65;\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/person.js?");
 
 /***/ })
 
