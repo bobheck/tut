@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script src="vue.js"></script>
+
+    <div id="app">
+        <h2 v-once>{{ title }} </h2>
+        <p>{{ sayHello() }} - <a v-bind:href='mylink'>Yahoo</a></p>
+        <hr>
+        <p v-html="finishedLink"></p>        
+    </div>
+    <hr>
+    <div id="app1">{{ title }}</div>
+
+    </html>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        title: 'Hello World !!!!',
+        mylink: 'http://yahoo.com',
+        finishedLink: '<a href="http://www.npr.org">NPR</a>'
+    },
+    methods: {
+        sayHello: function() {
+            this.title = 'Overrided title';
+            return this.title;
+        }
+    }
+})
+
+new Vue({
+    el: '#app1',
+    data: {
+        title: 'Bob'
+    }
+})
+</script>
