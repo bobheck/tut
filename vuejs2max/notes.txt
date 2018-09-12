@@ -1,0 +1,31 @@
+Vue CLI
+-------
+
+npm install -g vue-cli
+
+available templates
+    simple 
+    webpack-simple 
+    webpack 
+    browserify
+    browserify-simple
+    
+to create a new project with the vue-cli, get in the directory
+where you want the new project directory created
+type
+
+	vue init [template-name] [project name]
+	
+so, if we want to create a project named vue-cli in the
+current directory using the webpack-simple template, we 
+would type
+	vue init webpack-simple vue-cli
+	
+then cd to the directory that was just created (vue-cli)
+and run npm install
+
+when that finishes, still in the same directory run
+	npm run dev
+	
+that will start a development server that watches the files 
+and updates automatically
