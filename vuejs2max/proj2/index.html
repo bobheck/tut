@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<!-- https://vuejs.org/v2/guide/ -->
+
+
+<script src="./vue.js"></script>
+<div id="app">
+	<!-- v-once keeps value from first rendering only -->
+	<h1 v-once>{{ title }}</h1>
+	<p>{{ sayHello() }}</p>
+	<p>{{ sayHello2() }}</p>
+	<!-- v-bind allows to bind to html attributes and use data or method properties -->
+	<p><a v-bind:href="link">Yahoo</a></p>
+	<p v-html="finishedLink"></p>
+</div>
+
+<script>
+new Vue({
+el: '#app',
+data:  {
+	title: 'Hello World !c!',
+	link: 'http://www.yahoo.com',
+	finishedLink: '<a href="http://www.yahoo.com">Yahoo full</a>'
+},
+methods: {
+	sayHello: function() {
+		return 'Hello !!';
+	},
+	sayHello2: function() {
+		this.title = "Overridden Hello";
+		return this.title;
+	}
+}
+});
+</script>
+</html>
