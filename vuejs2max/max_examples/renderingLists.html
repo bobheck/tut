@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendering Lists</title>
+</head>
+<body>
+<script src="../vue.js"></script>
+<div id="app">
+<ul>
+    <li v-for="(ing, i) in ingredients">{{ ing }} ({{ i }})  </li>
+</ul>
+
+    <!-- with this button
+        push does not create a new array, but Vue.js watches for this and
+        updates the value position in the array
+        to avoid some issues with this, use v-bind to assign a key for each
+        element in an array, such as with the Alt listing of ingredients below
+    -->
+    <button @click="ingredients.push('spices')">Add new</button>
+
+    <ul>
+        <li v-for="(ing, i) in ingredients" :key="ing">(Alt) {{ ing }} ({{ i }}) </li>
+    </ul>
+
+
+<!--
+  second parameter of the for identifier is the index of the element.
+  first parameter is always the object itself.  second param for index is
+  optional.
+-->
+    <!-- alt use with template -->
+    <template v-for="(ing, i) in ingredients">
+        <h1>{{ ing }}</h1>
+        <p>{{ i }}</p>
+    </template>
+
+    <hr>
+        <ul>
+            <li v-for="person in persons">
+                <div v-for="(value, key, index) in person">
+                    {{ key}}: {{ value }} ({{index}})
+                </div>
+            </li>
+        </ul>
+    <hr>
+
+    <!-- number as object of v-for will loop that number of times -->
+    <div v-for="n in 10">
+        {{ n }}
+    </div>
+
+    <hr>
+
+</div>
+
+
+<script>
+    new Vue({
+       el: '#app',
+       data: {
+           ingredients: ['meat', 'fruit', 'cookies'],
+           persons: [
+               { name: 'Bob', age: 54, color: 'green'},
+               { name: 'Anna', age: 'unknown', color: 'blue'}
+           ]
+       }
+    });
+</script>
+
+</body>
+</html>

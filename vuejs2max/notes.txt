@@ -82,11 +82,20 @@ export default {
 </script>
 
 ===========================================
-INSTALL vue-resource to get http functions
+INSTALL axiom to get http functions
+
+install --save axiom
 ===========================================
 
-npm install --save vue-resource
 
+
+
+===========================================
+INSTALL routing
+
+
+
+===========================================
 ---
 
 

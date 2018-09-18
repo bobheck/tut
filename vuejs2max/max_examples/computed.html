@@ -21,15 +21,16 @@
             counter: 0,
             secondCounter: 0
         },
-        computed: {
+        computed: {  // computed properties are preferable to watch
+                     // computed properties always run synchronously
             output: function() {
                 console.log('Computed');
                 return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
             }
         },
-        watch: {
-            counter: function(value) {
-                var vm = this;
+        watch: {   // watch runs asynchronously
+            counter: function(value) {  // watches the data:counter property
+                var vm = this;  // for a callback, must store reference to this
                 setTimeout(function() {
                     vm.counter = 0;
                 }, 2000);
@@ -42,6 +43,8 @@
             }
         }
     });
+
+
 </script>
 
 </body>
