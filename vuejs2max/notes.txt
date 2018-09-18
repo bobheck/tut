@@ -29,3 +29,64 @@ when that finishes, still in the same directory run
 	
 that will start a development server that watches the files 
 and updates automatically
+
+remove node_modules and run npm install
+
+to build for production run 
+	npm run build
+	
+
+================================
+FONT AWESOME FOR VUE
+================================
+npm i --save @fortawesome/fontawesome-svg-core 
+npm i --save @fortawesome/free-solid-svg-icons 
+npm i --save @fortawesome/vue-fontawesome
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+
+===
+(main.js) - font awesome
+import Vue from 'vue'
+import App from './App'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
+
+library.add(faCoffee)  (or any icon you want)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-layers', FontAwesomeLayers);
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})
+
+==
+(App.vue) -- font awesome
+<template>
+  <div id="app">
+    <font-awesome-icon icon="coffee" />
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+===========================================
+INSTALL vue-resource to get http functions
+===========================================
+
+npm install --save vue-resource
+
+---
+
+
