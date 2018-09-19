@@ -8,3 +8,8 @@ http://vuejs.org/guide/events.html
 http://vuejs.org/guide/computed.html
 
 http://vuejs.org/guide/class-and-style.html
+
+http://vuejs.org/v2/guide/events.html#Event-Modifiers
+
+http://vuejs.org/v2/guide/events.html#Key-Modifiers
+
