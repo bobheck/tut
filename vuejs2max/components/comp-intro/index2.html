@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Components Intro 2</title>
+    <script src="../../vue.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <vc-server-status></vc-server-status>
+    <hr>
+    <vc-server-status></vc-server-status>
+
+</div>
+
+<div id="app2">
+
+    <vc-server-status></vc-server-status>
+    <hr>
+    <vc-server-status></vc-server-status>
+
+</div>
+<hr>
+
+
+
+<script>
+    var comp = {
+        data: function() {
+            return {
+                status: 'Critical'
+            };
+        },
+        template: '<p>Server Status: {{ status }} ' +
+            '(<button @click="changeStatus">Change</button>)</p>',
+        methods: {
+            changeStatus: function() {
+                this.status = 'Normal';
+            }
+         }
+    };
+
+    new Vue({
+        el: '#app',
+        data: {
+            status: 'Critical'
+        },
+        components: {
+            'vc-server-status': comp
+        }
+    });
+
+    new Vue({
+        el: '#app2',
+        data: {
+            status: 'Critical'
+        }
+    });
+
+</script>
+</body>
+</html>
