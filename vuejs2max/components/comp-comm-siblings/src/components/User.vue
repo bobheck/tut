@@ -7,7 +7,10 @@
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail :username="name" @nameWasReset="name = $event"></app-user-detail>
+                <app-user-detail
+                        :username="name"
+                        @nameWasReset="name = $event"
+                        :resetFn="resetName"></app-user-detail>
                 <!-- :name is shorthand for v-bind:name
                   so, we are binding the props 'name' in the app-user-detail component
                   to the data element name found in the data export on this user component
@@ -31,6 +34,9 @@
         methods: {
             changeName() {
                 this.name = 'Angie'
+            },
+            resetName() {
+                this.name = 'Bobby'
             }
         },
         components: {

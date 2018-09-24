@@ -53,11 +53,7 @@ App.vue
 </template>
 
 <script>
-    import Header1 from './components/Header.vue';
     export default {
-        components: {
-            appHeader: Header
-        }
     }
 </script>
 

@@ -4,6 +4,7 @@
         <p>Many Details</p>
         <p>User Name: {{ switchName() }}</p>
         <button @click="resetName">Reset Name</button>
+        <button @click="resetFn()">Reset Name</button>
     </div>
 </template>
 
@@ -18,8 +19,10 @@
                 type: String,   // if type is an Object or Array, then the any default should be a function
                 // required: true  // this component can be used only if it passes the username prop
                 default: 'Bob'  // use either required or default, not both
-               }
+               },
+               resetFn: Function
             },
+
             methods: {
                 switchName() {
                     return this.username.split("").reverse().join("");
