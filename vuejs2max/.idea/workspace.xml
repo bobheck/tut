@@ -1,122 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fda4ab9-4a5e-41b1-b5f9-4e6326526e65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/components/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/components/user/User.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/components/user/UserDetail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/components/user/UserEdit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/components/user/UserStart.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/Routing1/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Routing/info.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/src/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/src/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/src/ServerDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/src/Servers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1-InstructorAnswer/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/src/ServerDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/src/ServerFooter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/src/ServerHeader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/src/ServerList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Exercise1/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/src/components/User.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/src/components/UserDetail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/src/components/UserEdit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/src/components/User.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/src/components/UserDetail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/src/components/UserEdit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-communication2/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-intro/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-intro/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/src/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp1/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/src/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/src/ServerStatus.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp2/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/src/components/Server/ServerDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/src/components/Server/Servers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/src/components/Shared/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/src/components/Shared/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/post-better-struct/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/src/components/Server/ServerDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/src/components/Server/Servers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/src/components/Shared/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/src/components/Shared/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pre-better-struct/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8fda4ab9-4a5e-41b1-b5f9-4e6326526e65" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -1072,7 +957,7 @@
       <path value="$PROJECT_DIR$/vue-cli/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="8" />
     <option name="y" value="3" />
     <option name="width" value="1410" />
@@ -1198,15 +1083,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537286312231</updated>
-      <workItem from="1537286313524" duration="25958000" />
+      <workItem from="1537286313524" duration="26330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25958000" />
+    <option name="totallyTimeSpent" value="26330000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15964173" />
