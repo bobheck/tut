@@ -5,11 +5,11 @@ import UserEdit from './components/user/UserEdit.vue';
 import Home from './components/Home.vue';
 
 export const routes = [
-    { path: '', component: Home  },
+    { path: '', component: Home, name: 'home' },
     { path: '/user', component: User, children : [
-            {path: '', component : UserStart, props: true},
-            {path: ':id', component : UserDetail, props: true},
-            {path: ':id/edit', component : UserEdit, props: true}
+            {path: '', component : UserStart, props: true, name: 'userStart' },
+            {path: ':userId', component : UserDetail, props: true, name: 'userDetail' },
+            {path: ':userId/edit', component : UserEdit, props: true, name: 'userEdit' }
         ] }
 
 ];

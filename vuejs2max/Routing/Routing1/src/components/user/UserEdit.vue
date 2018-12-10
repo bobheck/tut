@@ -1,13 +1,13 @@
 c<template>
     <div>
         <h3>Edit the User</h3>
-        <p>ID: {{id}}</p>
+        <p>Selected ID: {{userId}}</p>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['id']
+        props: ['userId']
     }
 
 </script>
