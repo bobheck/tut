@@ -4,7 +4,7 @@
         <p>User ID: {{userId}}</p>
         <router-link
                 tag="button"
-                :to="{name: 'userEdit', props: true}"
+                :to="{name: 'userEdit', props: true, query: { locale: 'en', q: 100} }"
                 class="btn btn-success">Edit User</router-link>
     </div>
 </template>
