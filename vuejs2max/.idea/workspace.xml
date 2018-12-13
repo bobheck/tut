@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e381d43-7fdb-4470-877f-fb778061d705" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routing/Routing1/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Routing/Routing1/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routing/Routing1/src/components/user/UserDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Routing/Routing1/src/components/user/UserDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routing/Routing1/src/components/user/UserEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Routing/Routing1/src/components/user/UserEdit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routing/Routing1/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routing/Routing1/src/routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/components/comp-communication2/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
