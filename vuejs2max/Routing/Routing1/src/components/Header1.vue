@@ -1,8 +1,9 @@
 <template>
     <div class="container">
     <ul class="nav nav-pills">
-        <li class="nav-item"><router-link class="nav-link" to="/">Home</router-link></li>
-        <li class="nav-item"><router-link class="nav-link" to="/user">User</router-link></li>
+        <!-- do not use href tags, use router-link to not post to server each click -->
+        <router-link class="nav-link" active-class="active" exact to="/">Home</router-link>
+        <router-link class="nav-link" active-class="active" exact to="/user">User</router-link>
     </ul>
     </div>
 </template>

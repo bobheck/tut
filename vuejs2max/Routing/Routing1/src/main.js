@@ -5,9 +5,12 @@ import { routes } from './routes';
 
 Vue.use(VueRouter);
 
+
+
 const router = new VueRouter({
     routes,
     mode: 'history'  //default mode is hash, which puts # in url.  Must set server to always return index.html for every request to use history
+    // https://router.vuejs.org/guide/essentials/history-mode.html
 });
 
 new Vue({
