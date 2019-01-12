@@ -15,7 +15,7 @@
     export default {
         props: {
             myName: {
-                type: String
+                type: String   // [String, Array]
             },
             resetFn: Function,
             userAge: Number
