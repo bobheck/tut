@@ -6,8 +6,12 @@ import App from './App'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  components: { App },
-  template: '<App/>'
-})
+
+const Office = window.Office
+Office.initialize = () => {
+  new Vue({
+    el: '#app',
+    components: {App},
+    template: '<App/>'
+  })
+}
