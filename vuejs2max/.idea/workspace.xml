@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e9b68a1-1a7f-47a4-a9c6-0f0257d1c38e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/src/components/Author.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comp-advanced/src/components/New.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-app/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-app/src/components/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-app/src/components/NewQuote.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-app/src/components/Quote.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-app/src/components/QuoteGrid.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quote-app/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/src/components/Counter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/src/components/Result.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/src/store/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuex1/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/comp-advanced/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/comp-advanced/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/comp-advanced/src/components/Quote2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/comp-advanced/src/components/Quote2.vue" afterDir="false" />
-    </list>
+    <list default="true" id="5e9b68a1-1a7f-47a4-a9c6-0f0257d1c38e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -37,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vuex1/src/store/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="153">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -50,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/vuex1/src/components/Counter.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -67,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vuex1/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="85">
               <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -80,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/vuex1/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -89,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/vuex1/src/components/Result.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -166,11 +145,6 @@
               <item name="vuejs2max" type="b2602c69:ProjectViewProjectNode" />
               <item name="vuejs2max" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="vuejs2max" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuejs2max" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex1" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -220,11 +194,12 @@
       <workItem from="1547329229974" duration="245000" />
       <workItem from="1547329506629" duration="1468000" />
       <workItem from="1547479653894" duration="15527000" />
+      <workItem from="1547757438763" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33903000" />
+    <option name="totallyTimeSpent" value="33911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -238,7 +213,7 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="1" width="1090" height="1032" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28422055" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28422055" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -250,7 +225,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32893288" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32893288" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33259177" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33259177" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -460,9 +435,7 @@
     <entry file="file://$PROJECT_DIR$/quote-app/babel.config.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/quote-app/src/components/HelloWorld.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/quote-app/src/components/HelloWorld.vue" />
     <entry file="file://$PROJECT_DIR$/quote-app/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -544,34 +517,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vuex1/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vuex1/src/components/Result.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vuex1/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vuex1/src/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
@@ -581,7 +530,31 @@
     <entry file="file://$PROJECT_DIR$/vuex1/src/components/Counter.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vuex1/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vuex1/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vuex1/src/components/Result.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
