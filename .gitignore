@@ -31,3 +31,4 @@ venv
 .vs
 packages
 
+workspace.xml
