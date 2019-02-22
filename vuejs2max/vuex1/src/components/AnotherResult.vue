@@ -9,9 +9,9 @@
     import { mapGetters } from 'vuex';
     export default {
         computed: mapGetters({
-            dcnt: 'doubleCounter'},
-            ['stringCounter']
-        ),
+            dcnt: 'doubleCounter',
+            sc: ['stringCounter']
+        }),
 
         //     counter() {
         //         return this.$store.getters.doubleCounter;
