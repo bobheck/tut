@@ -32,3 +32,5 @@ venv
 packages
 
 workspace.xml
+node_modules
+
