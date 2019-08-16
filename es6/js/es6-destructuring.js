@@ -66,3 +66,71 @@ console.log('name3: ', name3);
 console.log('length: ', length);
 console.log('first: ', first);
 console.log('therest: ', therest);
+
+//-----------------------
+
+// destructuring objects and arrays
+const companies2 = [
+    { name: 'Google', loc: 'Mountain View' },
+    { name: 'Microsoft', loc: 'Redmond' },
+    { name: 'Amazon', loc: 'San Jose' }
+];
+console.log('companies2: ', companies2);
+
+console.log('location: ', location);  // ???
+
+const [{ loc }] = companies2;
+console.log('loc: ', loc);
+
+
+//-----------------------
+const company = {
+    name: 'Google',
+    datacenters: ['Iowa', 'Red Oak', 'Midlothian']
+};
+
+console.log('company: ', company);
+
+const {datacenters: [firstdatacenter, ...rest]} =  company;
+console.log('firstdatacenter: ', firstdatacenter);
+console.log('rest: ', rest);
+
+//--------------------  usages
+
+function signup({city, name, password, email, dob}) {
+    console.log('city: ', city);
+    console.log('dob: ', dob);
+    console.log('email: ', email);
+    console.log('password: ', password);
+    console.log('name: ', name);
+
+    // create new user
+}
+
+const userinfo = {
+    name: 'bob',
+    password: 'mypwd',
+    email: 'myemail@something.com',
+    dob: '1/1/1965',
+    city: 'Midlothian'
+};
+
+signup(userinfo);
+
+// usage of array deconstruct
+// need to produce array of objects with x and y properties
+
+const points = [
+    [4, 5],
+    [10, 1],
+    [0, 40]
+];
+console.log('points: ', points);
+
+let points2 = points.map(([x, y]) => {
+    return { x, y};
+});
+
+console.log('points2: ', points2);
+
+
