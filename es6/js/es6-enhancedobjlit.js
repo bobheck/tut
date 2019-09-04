@@ -14,7 +14,7 @@ function createBookShop(inventory) {
 }
 
 // new way
-// rule 1: whenever you reference a key and value that has the same name, you can elminiate the key
+// rule 1: whenever you reference a key and value that has the same name, you can eliminiate the key
 // rule 2: whenever you have a key value pair, where the value is a function, omit the colon and function keyword
 function createBookShop2(inventory) {
     return {
@@ -40,7 +40,7 @@ const bookShop2 = createBookShop2(inventory);
 
 
 console.log(`inventory value: ${bookShop.inventoryValue()}`);
-console.log(`price of Brian is a Whore: ${bookShop.priceForTitle('Brian is a Whore')}`);
+console.log(`Harry Potter: ${bookShop.priceForTitle('Harry Potter')}`);
 
 console.log(`inventory value: ${bookShop2.inventoryValue()}`);
 console.log(`price of Brian is a Whore: ${bookShop2.priceForTitle('Brian is a Whore')}`);

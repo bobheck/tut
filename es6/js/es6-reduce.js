@@ -1,11 +1,18 @@
 var numbers = [ 10,20,30];
-var sum = 0;
+var sumViaForLoop = 0;
+var sumViaReduce = 0;
 
-var n = numbers.reduce(function(sum, number){
-    return sum + number;
-}, 1100);
+for(var i = 0; i < numbers.length; i++) {
+    sumViaForLoop += numbers[i];
+}
+console.log('sumViaForLoop: ', sumViaForLoop);
 
-console.log(n);
+var iterateVal = 0;
+sumViaReduce = numbers.reduce(function(iterateVal, number){
+    return iterateVal + number;
+}, 100);
+
+console.log('sumViaReduce: ', sumViaReduce);
 
 // ---
 
