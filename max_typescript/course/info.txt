@@ -1,0 +1,22 @@
+Install typescript, npm -g install typescript
+
+To run typescript to compile a ts file, run tsc <fname.ts> - this will 
+compile the ts file and save it as fname.js
+
+To put a directory under npm control, run npm init from within the directory
+
+To install lite-server for dev use, run npm install lite-server --save-dev
+in the project folder
+
+Adding a script entry in the package.json file will allow you to 
+run lite-server by running "npm start" in the console
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+
+
+To put the project folder under control of typescript and automatically
+compile the ts files, run tsc --init in the project folder
+
