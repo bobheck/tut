@@ -1,4 +1,3 @@
-"use strict";
-var mmyName = "Bob";
-var mmyAge = 56;
-mmyName = 30;
+let mmyName = "Bob";
+let mmyAge = 56;
+//mmyName = 30;

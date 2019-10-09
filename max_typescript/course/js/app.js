@@ -1,28 +1,27 @@
-"use strict";
 // string
-var myName = 'Bob';
+let myName = 'Bob';
 // typescript automatically infers the type of variable myName to string
 // this creates an error
 // myName = 9;
 // number (no distinction between int, float, etc.)
-var myAge = 55;
+let myAge = 55;
 // boolean
-var hasHobbies = true;
+let hasHobbies = true;
 // explicitly assigning types
 // this creates a type 'any', no error
-var myRealAge;
+let myRealAge;
 myRealAge = 56;
 myRealAge = '57';
 // explicit
-var myRealAge2;
+let myRealAge2;
 myRealAge2 = 56;
 // array
-var hobbies = ["Cooking", "Computers"];
-var hobbies2 = ["Cooking", "Computers", 111];
+let hobbies = ["Cooking", "Computers"];
+let hobbies2 = ["Cooking", "Computers", 111];
 console.log(hobbies[0]);
 console.log(hobbies2[2]);
 // tuples
-var address = ["Superstreet", 99, 76065];
+let address = ["Superstreet", 99, 76065];
 console.log(address);
 // enums
 var Color;
@@ -32,10 +31,10 @@ var Color;
     Color[Color["Green"] = 111] = "Green";
     Color[Color["Yellow"] = 112] = "Yellow";
 })(Color || (Color = {}));
-var myColor = Color.Yellow;
+let myColor = Color.Yellow;
 console.log(myColor);
 // any
-var car = "BMW";
+let car = "BMW";
 console.log(car);
 car = { brand: "BMW", series: 3 };
 console.log(car);
@@ -55,28 +54,28 @@ function multiply(v1, v2) {
 }
 console.log(multiply(5, 9));
 // functions are types
-var myMultiply;
+let myMultiply;
 myMultiply = sayHello;
 myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(4, 6));
-var myMultiply2;
+let myMultiply2;
 myMultiply2 = multiply;
 console.log(myMultiply2(4, 7));
 // objects
 // typescript infers the types and names of the properties 
 // of an object when a new object is created without explicit types
-var userData = {
+let userData = {
     name: "Bob",
     age: 56
 };
 // object with explicit types
-var userData2 = {
+let userData2 = {
     name: "Bob",
     age: 56
 };
 // complex object
-var complex = {
+let complex = {
     data: [100, 3.99, 10],
     output: function (all) {
         return this.data;
@@ -84,7 +83,7 @@ var complex = {
 };
 console.log(complex.data);
 console.log(complex.output(true));
-var complex2 = {
+let complex2 = {
     data: [100, 7.99, 12],
     output: function (all) {
         return this.data;
@@ -93,10 +92,10 @@ var complex2 = {
 console.log(complex2.data);
 console.log(complex2.output(true));
 // union types
-var myRealRealAge = 27;
+let myRealRealAge = 27;
 myRealRealAge = "27";
 // check types
-var finalValue = "A string";
+let finalValue = "A string";
 if (typeof finalValue == "string") {
     console.log("finalValue is a string");
 }
@@ -106,13 +105,13 @@ function neverReturns() {
     throw new Error('an error');
 }
 // nullable types
-var canBeNull = 12;
+let canBeNull = 12;
 console.log(canBeNull);
 canBeNull = null;
 console.log(canBeNull);
-var canAlsoBeNull;
+let canAlsoBeNull;
 console.log(canAlsoBeNull);
-var canThisBeAny = null;
+let canThisBeAny = null;
 console.log("type of canThisBeAny is " + typeof canThisBeAny);
 console.log(canThisBeAny);
 canThisBeAny = 12;
