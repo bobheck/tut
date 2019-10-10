@@ -1,0 +1,5 @@
+To create a new component without the spec file
+
+ng g c components/users --spec=false
+
+

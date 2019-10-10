@@ -31,11 +31,11 @@ export class  UserComponent1 {
     // ctor
     constructor() {
        this.logInitialization();
-       this.firstName = 'Bob';
-       this.lastName = 'Heck';
-       this.age = 55;
-       this.address.city = 'Midlothian';
-       this.address.street = '6460 Sun Crest Ct';
+       this.firstName = 'John';
+       this.lastName = 'Doe';
+       this.age = 44;
+       this.address.city = 'Midland';
+       this.address.street = '111 Main St';
        this.address.state = 'TX';
 
        this.foo = 111;
