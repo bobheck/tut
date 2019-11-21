@@ -11,7 +11,8 @@ export class UsersComponent implements OnInit {
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = true;
-
+  buttonClasses = {};
+  cardStyles = {};
   constructor() { }
 
   ngOnInit() {
@@ -27,7 +28,10 @@ export class UsersComponent implements OnInit {
               city: 'Midlothian',
               state: 'TX'
           },
-          image: 'http://lorempixel.com/600/600/people/3'
+          image: 'http://lorempixel.com/600/600/people/3',
+          isActive: true,
+          balance: 100,
+          registered: new Date('11/11/2018 11:11:11')
         },
         {
           firstName: 'Allison',
@@ -38,7 +42,10 @@ export class UsersComponent implements OnInit {
               city: 'Middle',
               state: 'NE'
          },
-         image: 'http://lorempixel.com/600/600/people/1'
+         image: 'http://lorempixel.com/600/600/people/1',
+         isActive: false,
+         balance: 1200,
+         registered: new Date('12/11/2017 23:32:15')
         },
         {
           firstName: 'Dan',
@@ -49,7 +56,10 @@ export class UsersComponent implements OnInit {
               city: 'Thattown',
               state: 'MA'
          },
-         image: 'http://lorempixel.com/600/600/people/5'
+         image: 'http://lorempixel.com/600/600/people/5',
+         isActive: true,
+         balance: 0,
+         registered: new Date('01/23/2016 02:10:11')
         }
     ];
       this.loaded = true;
@@ -59,7 +69,11 @@ export class UsersComponent implements OnInit {
       //     lastName: 'Hardy'
       //   }
       // );
+      this.setButtonClasses();
+      this.setCardStyles();
     }, 90);
+
+
 
     //this.showExtended = false;
 
@@ -69,5 +83,20 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
   
+  setButtonClasses() {
+    this.buttonClasses = {
+      'btn-success': this.enableAdd,
+      'big-text': this.showExtended
+    }
+  }
 
+  setCardStyles() {
+    this.cardStyles = {
+      'padding-top': this.showExtended ? '0px' : '30px',
+      'padding-bottom': this.showExtended ? '0px' : '30px',
+      'padding-left': '5px',
+      'padding-right': '5px',
+      'font-size': this.showExtended ? '' : '2.3em'
+    }
+  }
 }
