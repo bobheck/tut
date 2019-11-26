@@ -7,16 +7,27 @@ import { User } from '../../models/User';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  user: User = {
+    firstName: '',
+    lastName: '',
+    age: null,
+    address: {
+      street: '',
+      city: '',
+      state: '',
+      zip: ''
+    }
+  };
   users: User[];
   showExtended: boolean = true;
   loaded: boolean = false;
-  enableAdd: boolean = true;
-  buttonClasses = {};
-  cardStyles = {};
+  enableAdd: boolean = false;
+  showUserForm: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
-    
+
     setTimeout(() => {
       this.users = [
         {
@@ -24,53 +35,43 @@ export class UsersComponent implements OnInit {
           lastName: 'Heck',
           age: 55,
           address: {
-              street: '6460 Sun Crest Ct',
-              city: 'Midlothian',
-              state: 'TX'
+            street: '6460 Sun Crest Ct',
+            city: 'Midlothian',
+            state: 'TX'
           },
-          image: 'http://lorempixel.com/600/600/people/3',
           isActive: true,
-          balance: 100,
-          registered: new Date('11/11/2018 11:11:11')
+          registered: new Date('11/11/2018 11:11:11'),
+          hide: true
         },
         {
           firstName: 'Allison',
           lastName: 'Smith',
           age: 25,
           address: {
-              street: '455 Maple Dr',
-              city: 'Middle',
-              state: 'NE'
-         },
-         image: 'http://lorempixel.com/600/600/people/1',
-         isActive: false,
-         balance: 1200,
-         registered: new Date('12/11/2017 23:32:15')
+            street: '455 Maple Dr',
+            city: 'Middle',
+            state: 'NE'
+          },
+          isActive: false,
+          registered: new Date('12/11/2017 23:32:15'),
+          hide: true
         },
         {
           firstName: 'Dan',
           lastName: 'Tarker',
           age: 76,
           address: {
-              street: '1123 Oak St',
-              city: 'Thattown',
-              state: 'MA'
-         },
-         image: 'http://lorempixel.com/600/600/people/5',
-         isActive: true,
-         balance: 0,
-         registered: new Date('01/23/2016 02:10:11')
+            street: '1123 Oak St',
+            city: 'Thattown',
+            state: 'MA'
+          },
+          isActive: true,
+          registered: new Date('01/23/2016 02:10:11'),
+          hide: true
         }
-    ];
+      ];
       this.loaded = true;
-      // this.addUser(
-      //   {
-      //     firstName: 'Pam',
-      //     lastName: 'Hardy'
-      //   }
-      // );
-      this.setButtonClasses();
-      this.setCardStyles();
+
     }, 90);
 
 
@@ -79,24 +80,24 @@ export class UsersComponent implements OnInit {
 
   }
 
-  addUser(user: User) {
-    this.users.push(user);
-  }
-  
-  setButtonClasses() {
-    this.buttonClasses = {
-      'btn-success': this.enableAdd,
-      'big-text': this.showExtended
-    }
+  addUser() {
+    this.user.isActive = true;
+    this.user.registered = new Date();
+    this.users.unshift(this.user);
+    console.log(this.users);
   }
 
-  setCardStyles() {
-    this.cardStyles = {
-      'padding-top': this.showExtended ? '0px' : '30px',
-      'padding-bottom': this.showExtended ? '0px' : '30px',
-      'padding-left': '5px',
-      'padding-right': '5px',
-      'font-size': this.showExtended ? '' : '2.3em'
-    }
+  toggleHide(user: User) {
+    user.hide = !user.hide;
   }
+
+  onSubmit(e) {
+    e.preventDefault();
+    console.log(123);
+  }
+
+  fireEvent(e) {
+    console.log(e.target.value);
+  }
+
 }

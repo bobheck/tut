@@ -5,11 +5,10 @@ export interface User {
     address?: {
         street?: string,
         city?: string,
-        state?: string
+        state?: string,
+        zip?: string
     },
-    image?: string,
     isActive?: boolean,
-    balance?: number,
-    registered?: any
-
+    registered?: any,
+    hide?: boolean
 }
