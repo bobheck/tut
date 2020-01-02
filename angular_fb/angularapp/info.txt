@@ -26,3 +26,22 @@ in angular.json file, add jquery, popper.js, and bootstrap to scripts array
 ],
 
 restart server (ng serve)
+
+
+========================================
+
+STEPS TO CREATE A SERVICE
+
+1. Create a new file i.e. - /services/my-service.service.ts
+
+2. Import @Injectable ande create class 
+
+3. Add as a provider to @ngModule 
+
+4. Call from component(s) 
+
+========================================
+
+
+
+
