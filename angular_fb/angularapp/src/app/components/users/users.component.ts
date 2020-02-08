@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../models/User';
 
 @Component({
@@ -10,13 +10,14 @@ export class UsersComponent implements OnInit {
   user: User = {
     firstName: '',
     lastName: '',
-    email: ''
-   };
+    email: '' 
+  };
   users: User[];
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = false;
   showUserForm: boolean = false;
+  @ViewChild('userForm') form: any;
 
   constructor() { }
 
@@ -27,7 +28,7 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'Bob',
           lastName: 'Heck',
-          email: 'bobheck11@gmail.com',
+          email: 'bobheck11@yahoo.com',
           isActive: true,
           registered: new Date('11/11/2018 11:11:11'),
           hide: true
@@ -35,7 +36,7 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'Allison',
           lastName: 'Smith',
-          email: 'asmith@someemail.com',
+          email: 'asmith111@yahoo.com',
           isActive: false,
           registered: new Date('12/11/2017 23:32:15'),
           hide: true
@@ -43,7 +44,7 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'Dan',
           lastName: 'Tarker',
-          email: 'dtarker@someemail.com',
+          email: 'dt1978@yahoo.com',
           isActive: true,
           registered: new Date('01/23/2016 02:10:11'),
           hide: true
@@ -53,29 +54,24 @@ export class UsersComponent implements OnInit {
 
     }, 90);
 
-
-
-    //this.showExtended = false;
-
+  }
+ 
+  toggleHide(user: User) {
+    user.hide = !user.hide;
   }
 
-  // addUser() {
-  //   this.user.isActive = true;
-  //   this.user.registered = new Date();
-  //   this.users.unshift(this.user);
-
-  //   this.user = {
-  //     firstName: '',
-  //     lastName: '',
-  //     email: ''
-  //   };
-
-  //   console.log(this.users);
-  // }
-
-  onSubmit(e) {
-    e.preventDefault();
-    console.log(123);
+  onSubmit({value, valid}: {value: User, valid: boolean}) {
+    if(!valid) {
+        console.log('Form is invalid');
+    }
+    else{
+      value.isActive = true;
+      value.registered = new Date();
+      value.hide = true;
+      this.users.unshift(value);
+      this.form.reset;
+    }
   }
+
 
 }
