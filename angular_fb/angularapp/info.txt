@@ -27,20 +27,31 @@ in angular.json file, add jquery, popper.js, and bootstrap to scripts array
 
 restart server (ng serve)
 
+may get an error, and have to run
+
+ npm install --save-dev @angular-devkit/build-angular
+
+ ..
+
+ next create a new navbar component (part of tutorial for bootstrap)
+
+
+..
 
 ========================================
 
 STEPS TO CREATE A SERVICE
 
-1. Create a new file i.e. - /services/my-service.service.ts
-
-2. Import @Injectable ande create class 
+1. ng g service services/my-service 
 
 3. Add as a provider to @ngModule 
+	-- add the "module=app.module" flag to automatically add as a provider
 
-4. Call from component(s) 
+
+3. Call from component(s) 
 
 ========================================
+
 
 
 
