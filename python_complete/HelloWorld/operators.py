@@ -10,5 +10,11 @@ print(a % b)   #remainder after integer division
 
 print()
 
-for i in range(1, 4):
-    print(i)
+print(a + b / 3 - 4 * 12)
+
+print()
+
+
+#operator precedence
+
+print(a / (b * a) / b)
