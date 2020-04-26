@@ -34,18 +34,7 @@ words = {"EAST": "E",
          "DONE": "Q",
          "BYE": "Q",
          "EXIT": "Q",
-         "STOP": "Q",
-         "ROAD": "1",
-         "HILL": "2",
-         "BUILDING": "3",
-         "VALLEY": "4",
-         "FOREST": "5"}
-
-named_exits = {1: {"2": 2, "3": 3, "4": 4, "5": 5},
-               2: {"5": 5},
-               3: {"1": 1},
-               4: {"1": 1, "2": 2},
-               5: {"1": 1, "2": 2}}
+         "STOP": "Q"}
 
 loc = 1
 while True:
@@ -55,9 +44,6 @@ while True:
 
     if loc == 0:
         break
-    else:
-        all_exits = exits[loc].copy()
-        all_exits.update(named_exits[loc])
 
     direction = input(f"Available exits are {available_exits}: ").upper()
     print()
@@ -67,7 +53,7 @@ while True:
             if word in words:
                 direction = words[word]
                 break
-    if direction in all_exits:
-        loc = all_exits[direction]
+    if direction in exits[loc]:
+        loc = exits[loc][direction]
     else:
         print("You cannot go in that direction")
