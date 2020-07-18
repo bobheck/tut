@@ -62,7 +62,7 @@ print(sorted(squares))
 
 print("=" * 50)
 print('sorted(even.difference(squares))')
-print(sorted(even.difference(squares)))
+print(sorted(even.difference(squares)))  # preferred method
 
 print("=" * 50)
 print("even - squares")
