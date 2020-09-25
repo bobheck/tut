@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.IO;
 
 namespace AsciiGen
 {
@@ -15,67 +16,95 @@ namespace AsciiGen
             byte[] zz = Encoding.ASCII.GetBytes("T");
             Debug.WriteLine(xx[0]);
             Debug.WriteLine(zz[0]);
-           
+                      
+            List<string> main = new List<string>();
+            main.Add("donald");
+            main.Add("Donald");
+            main.Add("DONALD");
+            main.Add("donald j");
+            main.Add("Donald J");
+            main.Add("DONALD J");
+            main.Add("trump");
+            main.Add("Trump");
+            main.Add("TRUMP");
+            main.Add("DonaldJTrump");
+            main.Add("donaldjtrump");
+            main.Add("DONALDJTRUMP");
+            main.Add("maga");
+            main.Add("Maga");
+            main.Add("MAGA");
+            main.Add("pence");
+            main.Add("Pence");
+            main.Add("PENCE");
+            main.Add("mike pence");
+            main.Add("Mike Pence");
+            main.Add("MIKE PENCE");
+            main.Add("20");
+            main.Add("16");
+            main.Add("2020");
+            main.Add("2016");
+            main.Add("potus");
+            main.Add("POTUS");
+            main.Add("william barr");
+            main.Add("William Barr");
+            main.Add("WILLIAM BARR");
+            main.Add("williambarr");
+            main.Add("WilliamBarr");
+            main.Add("barr");
+            main.Add("Barr");
+            main.Add("BARR");
+            main.Add("billbarr");
+            main.Add("BillBarr");
+            main.Add("BILLBARR");
+            main.Add("bill barr");
+            main.Add("Bill Barr");
+            main.Add("donaldj");
+            main.Add("DonaldJ");
+            main.Add("DONALDJ");
+            main.Add("usa");
+            main.Add("USA");
+            main.Add("m.a.g.a.");
+            main.Add("M.A.G.A.");
+            main.Add("make america great again");
+            main.Add("Make America Great Again");
+            main.Add("MAKE AMERICA GREAT AGAIN");
+            main.Add("Trump Pence");
+            main.Add("trump pence");
+            main.Add("TRUMP PENCE");
+            main.Add("Trump-Pence");
+            main.Add("trump-pence");
+            main.Add("TRUMP-PENCE");
+            main.Add("oooooo");
 
-            string[] ss = new string[78];
-            string[] res = new string[] { };
+            string[] ss = main.ToArray();
+
+            //for (int i = 1; i < 3; i++)
+            //{
+            //    int cnt = ss.Length / 3;
+            //    int ji1 = cnt * i;
+            //    int ji2 = cnt * (i + 1);
 
 
-            ss[0] = "donald";
-            ss[1] = "donald j";
-            ss[2] = "trump";
-            ss[3] = "maga";
-            ss[4] = "america";
-            ss[5] = "great";
-            ss[6] = "pence";
-            ss[7] = "mike pence";
-            ss[8] = "20";
-            ss[9] = "16";
-            ss[10] = "2020";
-            ss[11] = "2016";
-            ss[12] = "potus";
-            ss[13] = "william barr";
-            ss[13] = "williambarr";
-            ss[14] = "barr";
-            ss[15] = "billbarr";
-            ss[16] = "bill barr";
-            ss[17] = "donaldj";
-            ss[18] = "usa";
-            ss[19] = "don";
-            ss[20] = "donj";
-            ss[21] = "don j";
-            ss[22] = "mikepence";
-            ss[23] = "m.a.g.a.";
-            ss[24] = "virus";
-            ss[25] = "oooooo";
+            //    for (int j = ji1; j < ji2; j++)
+            //    {
+            //        int ji = j - ji1;
+            //        switch (i)
+            //        {
+            //            case 1:
+            //                ss[j] = ss[ji].Substring(0, 1).ToString().ToUpper();
+            //                if (ss[ji].Length > 1)
+            //                {
+            //                    ss[j] += ss[ji].Substring(1).ToLower();
+            //                }
+            //                break;
+            //            case 2:
+            //                ss[j] = ss[ji].ToUpper();
+            //                break;
+            //        }
 
-            for (int i = 1; i < 3; i++)
-            {
-                int cnt = ss.Length / 3;
-                int ji1 = cnt * i;
-                int ji2 = cnt * (i + 1);
+            //    }
 
-
-                for (int j = ji1; j < ji2; j++)
-                {
-                    int ji = j - ji1;
-                    switch (i)
-                    {
-                        case 1:
-                            ss[j] = ss[ji].Substring(0, 1).ToString().ToUpper();
-                            if (ss[ji].Length > 1)
-                            {
-                                ss[j] += ss[ji].Substring(1).ToLower();
-                            }
-                            break;
-                        case 2:
-                            ss[j] = ss[ji].ToUpper();
-                            break;
-                    }
-
-                }
-
-            }
+            //}
 
             // now lets fill a list with all possibilities
             List<string> baseList = ss.ToList();
@@ -84,6 +113,11 @@ namespace AsciiGen
 
             foreach (string st in baseList)
             {
+                if (ascttl(st) > 1638)
+                {
+                    continue;
+                }
+
                 poss.Add(st);
             }
 
@@ -101,11 +135,11 @@ namespace AsciiGen
                     sb2.Append(st).Append(st2);
                     string sbs = sb.ToString();
                     string sb2s = sb2.ToString();
-                    if(!poss.Contains(sbs))
+                    if(!poss.Contains(sbs) && ascttl(sbs) < 1639)
                     {
                         poss.Add(sbs);
                     }
-                    if (!poss.Contains(sb2s))
+                    if (!poss.Contains(sb2s) && ascttl(sb2s) < 1639)
                     {
                         poss.Add(sb2s);
                     }
@@ -119,7 +153,11 @@ namespace AsciiGen
 
             foreach (string st in poss)
             {
-              
+               if(ascttl(st) > 1638)
+                {
+                    continue;
+                }
+
                 foreach (string st2 in baseList)
                 {
                     if (st.Equals(st2, StringComparison.InvariantCultureIgnoreCase))
@@ -142,11 +180,11 @@ namespace AsciiGen
                     sbb2.Append(st).Append(st2);
                     string sbbs = sbb.ToString();
                     string sbb2s = sbb2.ToString();
-                    if (!poss.Contains(sbbs))
+                    if (!poss.Contains(sbbs) && ascttl(sbbs) < 1639)
                     {
                         toAdd.Add(sbbs);
                     }
-                    if (!poss.Contains(sbb2s))
+                    if (!poss.Contains(sbb2s) && ascttl(sbb2s) < 1639)
                     {
                         toAdd.Add(sbb2s);
                     }
@@ -157,13 +195,79 @@ namespace AsciiGen
 
             poss.AddRange(toAdd);
 
-            foreach(string s in poss)
+            toAdd.Clear();
+            
+            foreach (string st in poss)
             {
-                int ttl = ascttl(s);
-                if(ttl == 666)
+                if(ascttl(st) > 1638)
                 {
-                    Debug.WriteLine($"{s}: {ttl}");
+                    continue;
                 }
+
+                //foreach (string st2 in baseList)
+                //{
+                //    if (st.Equals(st2, StringComparison.InvariantCultureIgnoreCase))
+                //    {
+                //        continue;
+                //    }
+
+                //    string[] x = st.Split();
+                //    foreach (string z in x)
+                //    {
+                //        if (z.Equals(st2, StringComparison.InvariantCultureIgnoreCase))
+                //        {
+                //            continue;
+                //        }
+                //    }
+                //    StringBuilder sbb = new StringBuilder();
+                //    StringBuilder sbb2 = new StringBuilder();
+
+                //    sbb.Append(st).Append(" ").Append(st2);
+                //    sbb2.Append(st).Append(st2);
+                //    string sbbs = sbb.ToString();
+                //    string sbb2s = sbb2.ToString();
+                //    if (!poss.Contains(sbbs) && ascttl(sbbs) < 1639)
+                //    {
+                //        toAdd.Add(sbbs);
+                //    }
+                //    if (!poss.Contains(sbb2s) && ascttl(sbb2s) < 1639)
+                //    {
+                //        toAdd.Add(sbb2s);
+                //    }
+                //    sbb.Clear();
+                //    sbb2.Clear();
+                //}
+            }
+
+            // poss.AddRange(toAdd);
+
+            string f = Path.GetFileNameWithoutExtension(Path.GetTempFileName());
+            string path = $@"c:\temp\trump_{f}.txt";
+
+            using (StreamWriter sw = new StreamWriter(path, false))
+            {
+                foreach (string s in poss)
+                {
+                    int ttl = ascttl(s);
+                    if (ttl == 666)
+                    {
+                        Debug.WriteLine($"{s}: {ttl}");
+                        sw.WriteLine($"{s}: {ttl}");
+                    }
+
+                    if (ttl == 1638)
+                    {
+                        Debug.WriteLine($"{s}: {ttl}");
+                        sw.WriteLine($"{s}: {ttl}");
+                    }
+
+                    if (ttl == 438)
+                    {
+                        Debug.WriteLine($"{s}: {ttl}");
+                        sw.WriteLine($"{s}: {ttl}");
+                    }
+                }
+                sw.WriteLine($"{poss.Count:N} possibilities analyzed");
             }
 
             Debug.WriteLine("-----------------------");
