@@ -1,0 +1,138 @@
+==================================================================
+NPM
+https://docs.npmjs.com/cli-documentation/
+
+# Install npm-check-updates
+$ npm i -g npm-check-updates
+
+# Run npm-check-updates with -u, will upgrade package.json
+$ ncu -u
+
+# Install updated packages
+$ npm install
+
+==================================================================
+
+Angular CLI
+https://angular.io/cli
+
+
+npm install -g @angular/cli
+
+ng help
+ng generate --help
+
+ng build my-app -c production
+
+ng new
+The Angular CLI makes it easy to create an application that already works, right out of the box. It already follows our best practices!
+
+ng generate
+Generate components, routes, services and pipes with a simple command. The CLI will also create simple test shells for all of these.
+
+ng serve
+Easily test your app locally while developing.
+
+Test, Lint
+Make your code really shine. Run your unit tests, your end-to-end tests, or execute the official Angular linter with the breeze of a command.
+
+Commands:
+
+add		
+Adds support for an external library to your project.
+
+analytics		
+Configures the gathering of Angular CLI usage metrics. See https://angular.io/cli/usage-analytics-gathering.
+
+build	b	
+Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
+
+config		
+Retrieves or sets Angular configuration values in the angular.json file for the workspace.
+
+deploy		
+Invokes the deploy builder for a specified project or for the default project in the workspace.
+
+doc	d	
+Opens the official Angular documentation (angular.io) in a browser, and searches for a given keyword.
+
+e2e	e	
+Builds and serves an Angular app, then runs end-to-end tests using Protractor.
+
+generate	g	
+Generates and/or modifies files based on a schematic.
+
+help		
+Lists available commands and their short descriptions.
+
+lint	l	
+Runs linting tools on Angular app code in a given project folder.
+
+new	n	
+Creates a new workspace and an initial Angular app.
+
+run		
+Runs an Architect target with an optional custom builder configuration defined in your project.
+
+serve	s	
+Builds and serves your app, rebuilding on file changes.
+
+test	t	
+Runs unit tests in a project.
+
+update		
+Updates your application and its dependencies. See https://update.angular.io/
+
+version	v	
+Outputs Angular CLI version.
+
+xi18n	i18n-extract	
+Extracts i18n messages from source code.
+
+=======================================================
+ANGULAR
+
+@ViewChild() in Angular 8+
+In Angular 8+, the @ViewChild() syntax which you'll see in the next lecture needs to be changed slightly:
+
+Instead of:
+
+@ViewChild('serverContentInput') serverContentInput: ElementRef;
+use
+
+@ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
+
+The same change (add { static: true } as a second argument) needs to be applied to ALL usages 
+of @ViewChild() (and also @ContentChild() which you'll learn about 
+later) IF you plan on accessing the selected element inside of ngOnInit().
+
+If you DON'T access the selected element in ngOnInit (but anywhere else in your component), 
+set static: false instead!
+
+If you're using Angular 9, you only need to add { static: true } 
+(if needed) but not { static: false }.
+
+--------------------------------------------------------------------------------------------
+
+Component Lifecycle
+
+In order
+
+1. ngOnChanges - Called on creation of component and after a bound input property changes
+
+2. nbOnInit - Called once the component is initialized.  Runs after the constructor.
+
+3. ngDoCheck - Called during every change detection run.  Many iterations.  Runs on
+							 EVERY CHECK that Angular makes.
+
+4. ngAfterContentInit - Called after content(ng-content) has been projected into view
+
+5. ngAfterContentChecked - Called every time the projected content has been checked 
+
+6. ngAfterViewInit - Called after the component's view (and child views) has been initialized
+
+---------------------------------------------------------------------------------------------
+
+
+
+==========================================================
