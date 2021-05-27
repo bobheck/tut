@@ -27,3 +27,5 @@ venv
 /python-master/StringFormatting/.idea/workspace.xml
 /realworldapi/Proj1/.vs/Proj1/v15/Server/sqlite3
 /realworldapi/Proj1/Proj1/*.user
+packages
+/realworldapi/Proj1/.vs/Proj1/v15/*.suo
