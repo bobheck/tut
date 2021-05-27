@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Section 2, Lecture 24</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script src="../vue.js"></script>
+
+        <div id="app">
+            <button v-on:click="counter++">Increase</button>
+            <button v-on:click="counter--">Decrease</button>
+            <p>Counter: {{ counter }}</p>
+            <p>Result: {{ result() }}</p>
+            <hr>    
+            <button v-on:click="counter2++">Increase2</button>
+            <button v-on:click="counter2--">Decrease2</button>
+            <p>Counter2: {{ counter2 }}</p>
+            <p>Result2: {{ output }}</p>
+        </div>
+
+<!--
+    Best practice to use computed properties, but watch is available for longer and more complex code as 
+    a response to an event
+-->
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    counter: 0,
+                    counter2: 0
+                },
+                watch: {
+                    counter: function(value) {
+                        var vm = this;
+                        setTimeout(function() {
+                           vm.counter = 0;     
+                        }, 2000);
+                    }
+                },
+                computed: {
+                    output: function() {
+                        console.log('computed: output');
+                        return this.counter > 5 ? 'Greater than 5' : '5 or less';
+                    }        
+                },
+                methods: {
+                    result: function() {
+                        console.log('method: result()');
+                        return this.counter > 5 ? 'Greater than 5' : '5 or less';
+                    }
+                }
+            });
+        </script>
+    </body>
+
+</html>

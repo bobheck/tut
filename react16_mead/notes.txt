@@ -1,0 +1,22 @@
+React 16_mead notes:
+
+1. Install Node   nodejs.org
+2. npm install -g live-server
+3. npm install -g babel-cli
+4. in project directory, run yarn init
+5. in project directory, run yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
+6. first install, delete node_modules and regenerate by running yarn install
+
+babeljs.io - for info about babel
+
+to use babel, 
+	babel src/app.js --out-file=public/scripts/app.js --preset=env,react --watch
+	
+	
+	
+
+To use live-server, be in your root web directory and type live-server [dir]  
+for instance of your files are in root/public, be in root and type live-server public
+
+
+

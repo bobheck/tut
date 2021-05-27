@@ -1,0 +1,26 @@
+using angular cli
+
+
+---
+to create a new app
+ng new angularapp 
+
+
+---
+to create a component
+
+ng [g]enerate [c]omponent components/my-component
+
+
+---
+to run app
+ng serve --open
+
+
+---
+to update dependencies, from app root run
+npm install
+
+
+---
+

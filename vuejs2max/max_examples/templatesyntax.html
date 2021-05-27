@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Syntax</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <h1 v-once>{{ title }}</h1>
+    <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+    <hr>
+    <p v-html="finishedLink"></p>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello World!',
+            link: 'http://google.com',
+            finishedLink: '<a href="http://google.com">Google</a>'
+        },
+        methods: {
+            sayHello: function() {
+                this.title = 'Hello!';
+                return this.title;
+            }
+        }
+    });
+</script>
+</body>
+</html>

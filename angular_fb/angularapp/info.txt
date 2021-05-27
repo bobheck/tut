@@ -1,0 +1,58 @@
+To create a new component without the spec file
+
+ng g c components/users --spec=false
+
+
+---------------
+adding bootstrap
+---------------
+npm install bootstrap jquery popper.js
+
+in angular.json file, add bootstrap to styles array
+
+ "styles": [
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
+            ],
+
+
+in angular.json file, add jquery, popper.js, and bootstrap to scripts array
+
+ "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/popper.js/dist/umd/popper.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ],
+],
+
+restart server (ng serve)
+
+may get an error, and have to run
+
+ npm install --save-dev @angular-devkit/build-angular
+
+ ..
+
+ next create a new navbar component (part of tutorial for bootstrap)
+
+
+..
+
+========================================
+
+STEPS TO CREATE A SERVICE
+
+1. ng g service services/my-service 
+
+3. Add as a provider to @ngModule 
+	-- add the "module=app.module" flag to automatically add as a provider
+
+
+3. Call from component(s) 
+
+========================================
+
+
+
+
+

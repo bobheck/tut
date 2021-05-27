@@ -1,0 +1,84 @@
+to install routing:
+
+npm install --save vue-router
+
+=======================
+to  use router, in main.js
+
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from './App.vue';
+import { routes } from './routes';
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    routes
+});
+
+new Vue({
+  el: '#app',
+  router,
+  render: h => h(App)
+})
+
+
+=====================================
+routes.js file
+
+import User from './components/user/User.vue';
+import Home from './components/Home.vue';
+
+export const routes = [
+    { path: '', component: Home },
+    { path: '/user', component: User }
+
+];
+
+
+=====================================
+App.vue
+
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <h1>Routing</h1>
+                <app-header></app-header>
+                <hr>
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+    }
+</script>
+
+<style>
+</style>
+
+=====================================
+
+Header.vue
+
+<template>
+    <div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><router-link class="nav-link" to="/">Home</router-link></li>
+        <li class="nav-item"><router-link class="nav-link" to="/user">User</router-link></li>
+    </ul>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "Header"
+    }
+</script>
+
+<style scoped>
+
+</style>

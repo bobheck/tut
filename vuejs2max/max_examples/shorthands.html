@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorthands</title>
+</head>
+<body>
+<div id="app">
+   <button @click="changeLink">Change Link</button>
+   <a :href="link">Link</a>
+
+</div>
+
+</body>
+<script src="../vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            link: 'http://google.com'
+        },
+        methods: {
+            changeLink: function() {
+                this.link = 'http://yahoo.com'
+            }
+        }
+    });
+</script>
+</html>

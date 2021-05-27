@@ -1,84 +1,14 @@
-console.log("App.js is running!");
+// import subtract, { square, add } from "./utils.js";
 
-// to use babel babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
-// live-server public --watch
-// https://reactjs.org/docs/events.html
+// console.log("app.js is running !!");
+// console.log(square(999999999999));
+// console.log(add(9, 10));
+// console.log(subtract(90, 23));
 
+import isSenior, {isAdult, canDrink } from "./person.js";
 
-const app = {
-    title: "Indecision App",
-    subTitle: "Put your life into the hands of a computer",
-    //subTitle: '',
-    options: []
-};
-
-const onFormSubmit = (e) => {
-    
-    // e.preventDefault stops full page refresh
-    e.preventDefault();
-    
-    const option = e.target.elements.option.value;
-
-    // empty string is falsy
-    if(option) {
-        app.options.push(option);
-    }
-   
-    e.target.elements.option.value = "";
-    renderForm();
-    
-};
-
-const onClear = (e) => {
-    e.preventDefault();
-    app.options = [];
-    renderForm();
-};
-
-// JSX - JavaScript XML
-
-// important, in the form, do not reference {onFormSubmit()}, 
-// which would call the function and get the return value
-// we just want a reference to the function here,
-// so we set it to {onFormSubmit}, sans the parens
-const appRoot = document.getElementById("app");
-
-const renderForm = () => {
-    const template = (
-        <div>
-            < h1 >
-                {app.title}
-            </h1>
-            {app.subTitle && < h3 > {
-                app.subTitle
-            } </h3>}
-            <p>
-                {app.options.length > 0
-                    ? "Here are your options"
-                    : "No options"}
-            </p>
-            <button onClick={onClear}>Clear All Options</button>
-            <p>{app.options.length}</p>
-            <ol>
-                <li >
-                    Item one
-                </li>
-                <li>
-                    Item two
-                </li>
-            </ol>
-    
-            <form onSubmit={onFormSubmit}>
-                <input type="text" name="option"/>
-                <button>Add Option</button>
-            </form>
-    
-        </div>
-    );
-
-    ReactDOM.render(template, appRoot);
-};
-
-renderForm();
-
-
+console.log(isAdult(22));
+console.log(isAdult(7));
+console.log(canDrink(22));
+console.log(isSenior(67));
+console.log(isSenior(7));

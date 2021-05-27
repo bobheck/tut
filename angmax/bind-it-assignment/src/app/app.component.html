@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Bind-It! Assignment</h1>
+    </div>  
+  </div>
+  <div class="row">
+    <div  class="col-md-12">
+      <app-gamecontrol (oddCreated)="onOddCreated($event)" (evenCreated)="onEvenCreated($event)"></app-gamecontrol>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" *ngFor="let nm of numbers">
+      <div *ngIf="nm.isodd" >
+          <app-odd [nbr] = "nm" ></app-odd>
+      </div>
+      <div *ngIf="nm.isodd ==  false">
+        <app-even [nbr] = "nm" ></app-even>
+      </div>
+  </div>
+  </div>

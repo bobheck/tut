@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!-- https://vuejs.org/v2/guide/ -->
+<script src="./vue.js"></script>
+
+<div id="app">
+    <button v-on:click="btnClick(3, $event)">Click Me</button>
+    <p>{{ counter }}</p>
+    <p v-on:mousemove="showCoords">
+        Coordinates {{ x }} / {{ y }}
+        - <span v-on:mousemove="deadSpot"> DEAD SPOT </span>
+    </p>
+
+    <p v-on:mousemove="showCoords">
+            Coordinates {{ x }} / {{ y }}
+            - <span v-on:mousemove.stop="" > DEAD SPOT2 </span>
+    </p>
+    
+    <p>
+        <input type="text" v-on:keyup.enter="alertMe">
+    </p>
+
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            x: 0,
+            y: 0
+        },
+        methods: {
+            btnClick: function(step, event) {
+                this.counter += step;
+                
+            },
+            showCoords: function(e) {
+                this.x = e.clientX;
+                this.y = e.clientY;
+            },
+            deadSpot: function(event) {
+                event.stopPropagation();
+            },
+            alertMe: function(event) {
+                alert("keyup");
+            }
+
+        }
+});
+</script>
+</html>

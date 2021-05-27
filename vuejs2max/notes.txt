@@ -1,0 +1,101 @@
+Vue CLI
+-------
+
+npm install -g vue-cli
+
+available templates
+    simple 
+    webpack-simple 
+    webpack 
+    browserify
+    browserify-simple
+    
+to create a new project with the vue-cli, get in the directory
+where you want the new project directory created
+type
+
+	vue init [template-name] [project name]
+	
+so, if we want to create a project named vue-cli in the
+current directory using the webpack-simple template, we 
+would type
+	vue init webpack-simple vue-cli
+	
+then cd to the directory that was just created (vue-cli)
+and run npm install
+
+when that finishes, still in the same directory run
+	npm run dev
+	
+that will start a development server that watches the files 
+and updates automatically
+
+remove node_modules and run npm install
+
+to build for production run 
+	npm run build
+	
+
+================================
+FONT AWESOME FOR VUE
+================================
+npm i --save @fortawesome/fontawesome-svg-core 
+npm i --save @fortawesome/free-solid-svg-icons 
+npm i --save @fortawesome/vue-fontawesome
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+
+===
+(main.js) - font awesome
+import Vue from 'vue'
+import App from './App'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
+
+library.add(faCoffee)  (or any icon you want)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-layers', FontAwesomeLayers);
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})
+
+==
+(App.vue) -- font awesome
+<template>
+  <div id="app">
+    <font-awesome-icon icon="coffee" />
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+===========================================
+INSTALL axiom to get http functions
+
+install --save axiom
+===========================================
+
+
+
+
+===========================================
+INSTALL routing
+
+
+
+===========================================
+---
+
+

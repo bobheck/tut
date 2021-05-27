@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Manipulation with Vue</title>
+</head>
+<body>
+<div id="app">
+
+    <div class="demo"
+         @click="attachRed = !attachRed"
+         :class="{red: attachRed}"></div>
+    <div class="demo"
+         @click="attachBlue = !attachBlue"
+         :class="{blue: attachBlue}"></div>
+    <div class="demo"
+         @click="attachGreen = !attachGreen"
+        :class="{green: attachGreen}"></div>
+<hr>
+    <div class="demo"
+         @click="attachBlue = !attachBlue"
+         :class="color"></div>
+
+    <div class="demo"
+         @click="attachBlue = !attachBlue"
+         :class="[color, {red: attachRed}]"></div>
+
+<hr>
+    <input type="text" v-model="color">
+</div>
+
+</body>
+<script src="../vue.js"></script>
+<script>
+new Vue({
+    el: '#app',
+    data: {
+      attachRed: false,
+      attachBlue: false,
+      attachGreen: false,
+      color: 'green'
+    },
+    computed: {
+        cssClasses: function() {
+            return {
+                red:  !this.attachBlue,
+                blue: this.attachBlue
+            };
+        }
+    }
+});
+
+</script>
+
+<style>
+    div {
+        width: 100px; height: 100px; margin: 20px;
+    }
+
+    .demo {
+        background-color: gray;
+    }
+    .red {
+        background-color: red;
+    }
+    .green {
+        background-color: forestgreen;
+    }
+    .blue {
+        background-color: blue;
+    }
+
+
+</style>
+
+
+
+</html>

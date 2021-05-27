@@ -1,0 +1,13 @@
+<input
+    class="form-control"
+    type="text"
+    [(ngModel)]="username"
+    (input) = "onChangeUsername()"
+>
+<p>{{username}}</p>
+<button
+    class="btn btn-primary"
+    [disabled] = "!allowReset"
+    (click) = "onReset()"
+>
+Reset</button>

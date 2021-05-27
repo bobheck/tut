@@ -1,0 +1,98 @@
+=====
+
+if disconnected from azure
+
+cd ~/contoso-pets/src/ContosoPets.Api && code .
+
+
+=====
+
+
+dotnet new webapi -o contoso-pets/src/ContosoPets.Api
+
+cd ./contoso-pets/src/ContosoPets.Api
+dotnet run > ContosoPets.Api.log &
+curl -k -s https://localhost:5001/api/values | jq
+
+
+mkdir Models && touch $_/Product.cs
+
+
+================
+
+in Products.cs
+using System.ComponentModel.DataAnnotations;
+
+namespace ContosoPets.Api.Models
+{
+    public class Product
+    {
+        public long Id { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        [Range(minimum: 0.01, maximum: (double) decimal.MaxValue)]
+        public decimal Price { get; set; }
+    }
+}
+
+==========================
+
+mkdir Data && touch $_/ContosoPetsContext.cs $_/SeedData.cs
+
+
+-- this starts the server
+dotnet run > ContosoPets.Api.log &
+
+
+curl -k -s https://localhost:5001/api/products | jq
+
+
+
+
+
+---
+
+
+touch ./Controllers/ProductsController.cs
+
+
+------
+
+dotnet run > ContosoPets.Api.log &
+
+---- testing
+
+curl -i -k \
+    -H "Content-Type: application/json" \
+    -d "{\"name\":\"Plush Squirrel\",\"price\":0.00}" \
+    https://localhost:5001/api/Products
+    
+    
+curl -i -k \
+    -H "Content-Type: application/json" \
+    -d "{\"name\":\"Plush Squirrel\",\"price\":12.99}" \
+    https://localhost:5001/api/Products    
+    
+curl -i -k \
+    -X PUT \
+    -H "Content-Type: application/json" \
+    -d "{\"id\":2,\"name\":\"Knotted Rope\",\"price\":14.99}" \
+    https://localhost:5001/api/Products/2
+    
+curl -i -k -X DELETE https://localhost:5001/api/Products/1
+
+curl -k -s https://localhost:5001/api/Products | jq
+
+
+--- - download files
+
+pushd ~/contoso-pets/src && \
+    zip -r ~/contoso-pets.zip . && \
+    popd && \
+    download ~/contoso-pets.zip
+    
+    
+    
