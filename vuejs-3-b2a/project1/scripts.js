@@ -62,12 +62,19 @@ var products = [
     active: false,
     quantity: 1,
   },
+   {
+    photo: "img/water.png",
+    name: "Water Large",
+    price: 2.79,
+    active: false,
+    quantity: 1,
+  },
 ];
 
 const SelfServiceMachine = {
   data() {
     return {
-      message: "Hello World",
+      products: window.products
     };
   },
 };
