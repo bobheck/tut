@@ -19,7 +19,7 @@
                     v-for="prod in products" 
                     class="product"
                     v-on:click="prod.active = !prod.active"
-                    :class="prod.active ? 'selected' : ''"
+                    :class="{ selected : prod.active }"
                 >
                     <div class="photo">
                         <img :src="prod.photo">
