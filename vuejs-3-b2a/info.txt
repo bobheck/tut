@@ -1,2 +1,5 @@
 2025-05-18 23:05 started this course on Udemy
 VueJS 3 for Modern Web Development - Beginner to Advanced
+
+Docs:
+https://v3.vuejs.org
