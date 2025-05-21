@@ -20,9 +20,14 @@ const iceCreamFlavors = ref([]);
       lazy
       number 
   -->
-    <input v-model.trim="newItem" type="text" placeholder="Add an item" />
-    <label> 
-      <input type="checkbox" v-model="newItemHighPriority">
+    <input
+      v-model.trim="newItem"
+      type="text"
+      v-on:keyup.enter="items.push({ id: items.length + 1, label: newItem })"
+      placeholder="Add an item"
+    />
+    <label>
+      <input type="checkbox" v-model="newItemHighPriority" />
       High Priority
     </label>
     <button
