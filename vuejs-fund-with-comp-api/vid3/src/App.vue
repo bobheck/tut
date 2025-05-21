@@ -8,8 +8,8 @@ const items = ref([
   {id: 3, label: "20 cups"}
 ])
 const newItem = ref("")
-const newItemHighPriority = ref(false)
-const iceCreamFlavors = ref([])
+const newItemPriority = ref("low")
+//const iceCreamFlavors = ref([])
 </script>
 
 <template>
@@ -19,11 +19,20 @@ const iceCreamFlavors = ref([])
       lazy
       number 
   -->
-  <input v-model.trim="newItem" type="text" placeholder="Add an item"> {{ newItem }}
+  <input v-model.trim="newItem" type="text" placeholder="Add an item"> 
   <label>
-    <input type="checkbox" v-model="newItemHighPriority"> 
-    High Priority
+    Priority
   </label>
+  <label>
+    <input type="radio" v-model="newItemPriority" value="low">
+     Low
+  </label>
+  <label>
+    <input type="radio" v-model="newItemPriority" value="high">
+     High
+  </label>
+  <br />
+  {{ newItemPriority }}
   <ul>
     <li v-for="({id, label}, index) in items" :key="id">
       {{label}}
