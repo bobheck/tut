@@ -23,15 +23,11 @@ const newItemPriority = ref("low")
   <label>
     Priority
   </label>
-  <label>
-    <input type="radio" v-model="newItemPriority" value="low">
-     Low
-  </label>
-  <label>
-    <input type="radio" v-model="newItemPriority" value="high">
-     High
-  </label>
-  <br />
+    <select v-model="newItemPriority">
+      <option value="low">Low</option>
+      <option value="high">High</option>
+    </select>
+    <br />
   {{ newItemPriority }}
   <ul>
     <li v-for="({id, label}, index) in items" :key="id">
