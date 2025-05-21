@@ -9,25 +9,31 @@ const items = ref([
 ]);
 const newItem = ref("");
 const newItemHighPriority = ref(false);
-const iceCreamFlavors = ref([])
+const iceCreamFlavors = ref([]);
 </script>
 
 <template>
   <h1>{{ header }}</h1>
-  <!-- v-model modifiers 
+  <div class="add-item-form">
+    <!-- v-model modifiers 
       trim
       lazy
       number 
   -->
-  <input v-model.trim="newItem" type="text" placeholder="Add an item" />
-  <label> High Priority </label>
-  <input type="checkbox" v-model="newItemHighPriority" /> 
+    <input v-model.trim="newItem" type="text" placeholder="Add an item" />
+    <label> 
+      <input type="checkbox" v-model="newItemHighPriority">
+      High Priority
+    </label>
+    <button
+      v-on:click="items.push({ id: items.length + 1, label: newItem })"
+      class="btn btn-primary"
+    >
+      Save Item
+    </button>
+  </div>
+  <input type="checkbox" v-model="newItemHighPriority" />
   <br />
-  <label><input type="checkbox" value="vanilla" v-model="iceCreamFlavors">Vanilla</label>
-  <label><input type="checkbox" value="chocolate" v-model="iceCreamFlavors">Chocolate</label>
-  <label><input type="checkbox" value="strawberry" v-model="iceCreamFlavors">Strawberry</label>
-  <br />
-  {{ iceCreamFlavors }}
   <ul>
     <li v-for="({ id, label }, index) in items" :key="id">
       {{ label }}
