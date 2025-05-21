@@ -12,6 +12,7 @@ const newItemHighPriority = ref(false);
 const iceCreamFlavors = ref([]);
 const saveItem = ()=>{
   items.value.push({ id: items.value.length + 1, label: newItem.value })
+  newItem.value = ""
 }
 </script>
 
