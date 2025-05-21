@@ -19,19 +19,23 @@ const saveItem = () => {
   newItem.value = "";
 };
 
-const doEdit = (e)=>{
+const doEdit = (e) => {
   editing.value = e;
   newItem.value = "";
-}
-
+};
 </script>
 
 <template>
   <div class="header">
     <h1>{{ header }}</h1>
-    <button v-if="editing" class="btn btn-cancel" @click="doEdit(false)">Cancel</button>
-    <button v-else class="btn btn-primary" @click="doEdit(true)">Add Item</button>
+    <button v-if="editing" class="btn btn-cancel" @click="doEdit(false)">
+      Cancel
+    </button>
+    <button v-else class="btn btn-primary" @click="doEdit(true)">
+      Add Item
+    </button>
   </div>
+  <a v-bind:href="newItem">Dynamic Link</a>
   <form class="add-item-form" v-if="editing" @submit.prevent="saveItem">
     <!-- v-model modifiers 
       trim
