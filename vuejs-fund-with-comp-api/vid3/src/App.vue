@@ -14,6 +14,11 @@ const iceCreamFlavors = ref([])
 
 <template>
   <h1>{{ header }}</h1>
+  <!-- v-model modifiers 
+      trim
+      lazy
+      number 
+  -->
   <input v-model.trim="newItem" type="text" placeholder="Add an item"> {{ newItem }}
   <label>
     <input type="checkbox" v-model="newItemHighPriority"> 
