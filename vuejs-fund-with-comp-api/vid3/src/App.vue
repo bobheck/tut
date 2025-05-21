@@ -3,7 +3,6 @@ import { ref } from "vue";
 
 // research ref (todo)
 
-
 const header = ref("Shopping List App");
 const items = ref([
   { id: 1, label: "10 party hats" },
