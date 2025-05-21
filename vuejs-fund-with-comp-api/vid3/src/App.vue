@@ -35,7 +35,7 @@ const doEdit = (e) => {
       Add Item
     </button>
   </div>
-  <a v-bind:href="newItem">Dynamic Link</a>
+  
   <form class="add-item-form" v-if="editing" @submit.prevent="saveItem">
     <!-- v-model modifiers 
       trim
@@ -47,7 +47,11 @@ const doEdit = (e) => {
       <input type="checkbox" v-model="newItemHighPriority" />
       High Priority
     </label>
-    <button class="btn btn-primary">Save Item</button>
+    <button 
+      class="btn btn-primary"
+      v-bind:disabled="newItem.length === 0"
+      >
+      Save Item</button>
   </form>
   <ul>
     <li v-for="({ id, label }, index) in items" :key="id">
