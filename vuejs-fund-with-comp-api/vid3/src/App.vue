@@ -46,4 +46,7 @@ const saveItem = ()=>{
       {{ label }}
     </li>
   </ul>
+  <p v-if="!items.length">
+     Nothing to see here
+  </p>
 </template>
