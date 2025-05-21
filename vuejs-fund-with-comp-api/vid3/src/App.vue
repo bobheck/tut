@@ -14,7 +14,10 @@ const iceCreamFlavors = ref([]);
 
 <template>
   <h1>{{ header }}</h1>
-  <div class="add-item-form">
+  <form
+    class="add-item-form"
+    v-on:submit.prevent="items.push({ id: items.length + 1, label: newItem })"
+  >
     <!-- v-model modifiers 
       trim
       lazy
@@ -23,20 +26,14 @@ const iceCreamFlavors = ref([]);
     <input
       v-model.trim="newItem"
       type="text"
-      v-on:keyup.enter="items.push({ id: items.length + 1, label: newItem })"
       placeholder="Add an item"
     />
     <label>
       <input type="checkbox" v-model="newItemHighPriority" />
       High Priority
     </label>
-    <button
-      v-on:click="items.push({ id: items.length + 1, label: newItem })"
-      class="btn btn-primary"
-    >
-      Save Item
-    </button>
-  </div>
+    <button class="btn btn-primary">Save Item</button>
+  </form>
   <input type="checkbox" v-model="newItemHighPriority" />
   <br />
   <ul>
