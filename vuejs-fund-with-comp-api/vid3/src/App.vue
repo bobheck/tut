@@ -49,7 +49,7 @@ const doEdit = (e) => {
     </label>
     <button 
       class="btn btn-primary"
-      v-bind:disabled="newItem.length < 5"
+      :disabled="newItem.length < 5"
       >
       Save Item</button>
   </form>
