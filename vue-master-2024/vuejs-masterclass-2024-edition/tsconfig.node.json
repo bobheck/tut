@@ -1,19 +1,31 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
-  "include": [
+  
+
+   "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Node 20",
+    "_version": "20.1.0",
+    
+    
+    "include": [
     "vite.config.*",
     "vitest.config.*",
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*"
   ],
+  
   "compilerOptions": {
+    "lib": ["es2023"],
+    "module": "nodenext",
+    "target": "es2022",
     "composite": true,
     "noEmit": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "types": ["node"]
-  }
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node16"
+  },  
+  "types": ["node"]
+  
 }
